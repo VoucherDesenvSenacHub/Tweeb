@@ -3,28 +3,31 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Refazer Senha</title>
-    <link rel="stylesheet" href="senha.Css">
+    <title>Código de verificação</title>
+    <link rel="stylesheet" href="styles/codigo.css">
 </head>
 <body>
     <div class="container">
         <div class="forms">
             <form action="">
-                <h1 class="titulo">Refazer Senha</h1>
-                <p class="sutitulo">Sua conta irá ser resetada. Por favor, digite uma nova senha para sua conta.</p>
+                <a href="#" class="voltar"><i class='bx bx-chevron-left'></i> Voltar</a>
+                <h1 class="titulo">Digite o código</h1>
+                <p class="subtitulo">Um código de verificação foi enviado para o seu e-mail.</p>
                 <div class="input-group w50">
-                    <label for="senha">Senha</label>
-                    <input type="password" name="senha" placeholder="Digite sua senha."required>
+                    <label for="codigo">Código</label>
+                    <input type="password" name="codigo" id="codigo" placeholder="Digite o código" required>
                 </div>
-                <div class="input-group w50">
-                    <label for="confirmar senha">Confirmar Senha</label>
-                    <input type="password" name="confirmar senha" id="confirmar senha" placeholder="Confirme sua senha" required>
-                </div>
-                <button type="submit" class="Btn">Enviar Senha</button>
+                <ul class="login-utils">
+                    <li class="margin-bottom-8 mar-top-8">
+                        <span class="texto1">Não recebeu o código?</span>
+                        <a href="#" class="texto2">Reenvie</a>
+                    </li>
+                </ul>
+                <button type="submit" class="btn">Verifique</button>
             </form>
         </div>
         <div class="image-container">
-            <img src="src/imagem/Rectangle 20 (1).png" alt="Imagem refazer senha">
+            <img src="imagem/Rectangle 20 (1).png" alt="Imagem verificacao">
         </div>
     </div>
 </body>
