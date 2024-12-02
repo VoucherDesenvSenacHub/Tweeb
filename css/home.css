@@ -1,0 +1,140 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
+
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap');
+
+/* CSS reset */
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: "Montserrat", sans-serif;
+}
+
+/* Define cores principais em variaveis */
+:root{
+    --azul-intenso: #291E40;
+}
+
+body{
+    background-color: #FAFAFA;
+}
+
+.container{
+    background-color: white;
+    display: flex;
+    height: 618px;
+}
+
+/* Divide o container em duas divs. */
+.container-text, .container-img, .ad-left, .ad-right{
+    width: 50%;
+    height: 100%;
+}
+
+.container-text{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+span{
+    font-weight: 700; /* BOLD */
+}
+
+.content-text h1{
+    font-weight: 400;
+}
+
+.content-text{
+    font-size: 2.5rem;
+}
+
+.content-about{
+    font-size: 18px;
+    color: #909090;
+}
+
+.container-image img{
+    width: 693px;
+    height: 100%;
+}
+
+/* seção abaixo */
+
+.container-ad{
+    display: flex;
+    margin-top: 10px;
+    height: 544px;
+    background-color: #EDEDED;
+}
+
+.ad-right{
+    background-color: var(--azul-intenso);
+}
+
+.ad-left, .ad-right{
+    display: flex;
+    flex: row;
+}
+
+.ad-imagem{
+    height: 100%;
+    width: auto;
+    margin-left: 40px;
+}
+
+.ad-imagem .img-fix{
+    height: auto;
+    max-width: 300px;
+}
+
+.ad-text{
+    height: 100%;
+    width: 20%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+
+.ad-text h1{
+    font-size: 29px;
+    font-weight: 300;
+    line-height: 40px;
+}
+
+.ad-text p{
+    font-size: 14px;
+    color: #909090;
+    line-height: 24px;
+}
+
+.ad-imagem2{
+    margin-left: 70px;
+}
+
+.ad-text2{
+    margin-left: 20%;
+}
+
+.ad-text2 h1{
+    color: white;
+}
+
+/* Categorias */
+.categorias{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 352px;
+    margin-top: 20px;
+    background-color: #FAFAFA;
+}
+
+.categorias-content{
+    display: flex;
+    flex-direction: column;
+    height: 80%;
+    width: 80%;
+    /* background-color: black; */
+}
