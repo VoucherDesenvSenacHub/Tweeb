@@ -293,4 +293,8 @@ footer{
 
 .btn2:hover{
     background-color: #da6b6b;
-} 
+}
+
+.btn-text a{
+    color: #8692A6;
+}
