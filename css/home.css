@@ -122,6 +122,7 @@ span{
 }
 
 /* Categorias */
+
 .categorias{
     display: flex;
     align-items: center;
@@ -137,4 +138,63 @@ span{
     height: 80%;
     width: 80%;
     /* background-color: black; */
+}
+
+.categorias-text{
+    display: flex;
+    flex-direction: row;
+}
+
+.text{
+    width: 90%;
+}
+
+.text h1{
+    font-weight: 500;
+    font-size: 24px;
+}
+
+.arrows{
+    display: flex;
+    justify-content: space-evenly;
+    gap: 10px;
+    width: 10%;
+}
+
+.arrows img{
+    width: 12px;
+    height: auto;
+}
+
+.categorias-card{
+    height: 100%;
+    width: 100%;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-evenly;
+    /* background-color: rebeccapurple; */
+}
+
+.card{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    height: 128px;
+    width: 160px;
+    border-radius: 15px;
+    gap: 7px;
+    background-color: rebeccapurple;
+}
+
+.card img{
+    height: auto;
+    width: 48px;
+}
+
+.card p{
+    font-weight: 500;
+    font-size: 16px;
+    line-height: 24px;
 }
