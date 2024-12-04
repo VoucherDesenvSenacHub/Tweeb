@@ -2,10 +2,10 @@
     
 class Database{
     public $conn;
-    public string $local="localhost:3306";
-    public string $db="tweeb";
-    public string $user="root";
-    public string $password="";
+    public string $local="10.38.0.94";
+    public string $db="TWEEB";
+    public string $user="devweb";
+    public string $password="suporte@22";
     public $table;
 
     // CONFIGURE O DB CONFORME O SERVIDOR ESTABELECIDO PELO ORIENTADOR
@@ -64,9 +64,16 @@ class Database{
         }
     }
 
-    public function update()
-    {
-
+    public function update($values, $where){
+        $fields = array_keys($values);
+        $set = implode(' = ?, ', $fields) . ' = ?';
+        $query = 'UPDATE ' . $this->table . ' SET ' . $set . ' WHERE ' . $where;
+        try {
+            $result = $this->execute($query, array_values($values));
+            return $result ? true : false;
+        } catch (PDOException $err) {
+            die("Update Failed: " . $err->getMessage());
+        }
     }
 
     public function select($where = null,$order = null,$limit = null, $fields = '*'){
