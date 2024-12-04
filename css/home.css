@@ -13,6 +13,10 @@
 /* Define cores principais em variaveis */
 :root{
     --azul-intenso: #291E40;
+    --verde: #CEF5A4;
+    --azul-claro: #D4E3FF;
+    --roxo: #BF99FE;
+    --laranja: #FE8C67;
 }
 
 body{
@@ -134,6 +138,7 @@ span{
 
 .categorias-content{
     display: flex;
+    justify-content: center;
     flex-direction: column;
     height: 80%;
     width: 80%;
@@ -143,6 +148,10 @@ span{
 .categorias-text{
     display: flex;
     flex-direction: row;
+}
+
+.text h1{
+    margin-left: 40px;
 }
 
 .text{
@@ -167,7 +176,7 @@ span{
 }
 
 .categorias-card{
-    height: 100%;
+    height: 65%;
     width: 100%;
     display: flex;
     flex-direction: row;
@@ -185,16 +194,99 @@ span{
     width: 160px;
     border-radius: 15px;
     gap: 7px;
-    background-color: rebeccapurple;
+}
+
+.card:hover{
+    cursor: pointer;
 }
 
 .card img{
     height: auto;
-    width: 48px;
+    max-width: 48px;
 }
 
 .card p{
     font-weight: 500;
     font-size: 16px;
     line-height: 24px;
+}
+
+/* cores e ajustes para as categorias */
+
+.card1{
+    background-color: var(--verde);
+}
+
+.card2{
+    background-color: var(--azul-claro);
+}
+
+.card2 p{
+    line-height: 16px;
+}
+
+/* as imagens que precisam alterar o width são realmente imagens e não vetores, pra não precisar usar isso, teria que achar alternativas das imagens usando vetores que seguem o mesmo padrão das anteriores. */
+.card2 img{
+    margin-bottom: 10px;
+    width: 36px;
+}
+
+.card3{
+    background-color: var(--roxo);
+}
+
+.card3 img{
+    max-width: 30px;
+}
+
+.card4{
+    background-color: var(--laranja);
+}
+
+.card5{
+    background-color: var(--azul-claro);
+}
+
+.card6{
+    background-color: var(--verde);
+}
+
+/* Produtos */
+
+.produtos{
+    height: 1584px;
+    background-color: white;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.tabs{
+    align-items: center;
+    height: 100px;
+    width: 75%;
+    display: flex;
+    gap: 20px;
+}
+
+.tab-button{
+    background-color: white;
+    font-size: 18px;
+    border: none;
+    height: 35px;
+}
+
+.tab-button:hover{
+    cursor: pointer;
+}
+
+.tab-button1{ /* solução temporaria enquanto não da pra selecionar os outros filtros */
+    border: none;
+    border-bottom: 2px solid black;
+}
+
+.produtos-grid{
+    width: 80%;
+    height: 900px;
+    background-color: #FAFAFA;
 }
