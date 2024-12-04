@@ -2,10 +2,10 @@
     
 class Database{
     public $conn;
-    public string $local="localhost:3306";
-    public string $db="tweeb";
-    public string $user="root";
-    public string $password="";
+    public string $local="10.38.0.94";
+    public string $db="TWEEB";
+    public string $user="devweb";
+    public string $password="suporte@22";
     public $table;
 
     // CONFIGURE O DB CONFORME O SERVIDOR ESTABELECIDO PELO ORIENTADOR
