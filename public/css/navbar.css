@@ -115,7 +115,7 @@ nav ul li a i {
     
 }
 
-/* Barra de departamentos com fundo roxo */
+
 .departments-bar {
     background-color: #291E40; 
     display: flex;
@@ -126,7 +126,7 @@ nav ul li a i {
     position: relative;
 }
 
-/* Estilo dos departamentos */
+
 .department {
     position: relative;
     display: flex;
@@ -139,74 +139,75 @@ nav ul li a i {
     cursor: pointer;
 }
 
-/* Alterando a cor do texto ao passar o mouse */
+
 .department:hover {
     color: rgb(219, 218, 218);
 }
 
-/* Tamanho da imagem e alinhamento */
+
 .department img {
-    width: 20px;  /* Mantém o tamanho da imagem em 20px */
+    width: 20px;  
     height: 20px;
     object-fit: contain;
 }
 
-/* Estilo do separador entre os departamentos */
+
 .separator {
     color: #9e9e9e;
     font-size: 18px;
     font-family: 'Montserrat', sans-serif;
 }
 
-/* A seta indicadora */
+
 .department i {
     font-size: 16px;
     transition: transform 0.3s ease;
 }
 
-/* Quando o submenu estiver aberto, a seta gira */
+
 .department.open i {
     transform: rotate(180deg);
 }
 
 .submenu {
-    position: fixed;  /* Fica fixo na tela */
-    top: 142px;        /* Ajuste o topo para o submenu aparecer logo abaixo da barra de navegação */
-    left: 0;           /* Submenu começa do lado esquerdo */
-    width: 100vw;      /* Ocupa toda a largura da tela */
-    background-color: #291E40;/* Cor roxa */
-    padding: 20px 0;   /* Padding ajustado para espaçamento */
-    opacity: 0;        /* Submenu começa invisível */
-    visibility: hidden; /* Inicialmente invisível */
+    position: fixed;  
+    top: 143px;        
+    left: 0;           
+    width: 100vw;      
+    background-color: #291E40; 
+    padding: 20px 0;   
+    opacity: 0;        
+    visibility: hidden; 
     transition: opacity 0.3s ease, visibility 0.3s ease;
-    z-index: 9999;      /* Garante que o submenu fique sobre outros elementos */
+    z-index: 9999;      
     border: 3px solid transparent;
     background-clip: padding-box;
     border-image: linear-gradient(45deg,#CEF5A4, #D4E3FF, #FE8C67);
     border-image-slice: 1;
     box-shadow: rgba(0, 0, 0, 0.1) 0px 10px 15px -3px, rgba(0, 0, 0, 0.05) 0px 4px 6px -2px;
+    max-height: 300px;  
+    overflow-y: auto;   
 }
 
-/* Exibe o submenu quando o departamento estiver aberto */
+
 .department.open .submenu {
     opacity: 1;
     visibility: visible;
 }
 
-/* Estilo dos itens dentro do submenu */
 .submenu li {
     list-style-type: none;
     padding: 8px 15px;
     text-align: left;
-    width: 20%; /* A largura dos itens pode ser ajustada, 20% para exibir 5 itens por linha */
-    float: left;  /* Faz os itens se alinharem lado a lado */
+    width: 100%; 
     box-sizing: border-box;
+    display: block;  
 }
 
 .submenu a {
     text-decoration: none;
-    color: #ffffff;  /* Cor do texto no submenu */
-    font-size: 14px; /* Tamanho da fonte ajustado */
+    color: #ffffff;  
+    font-size: 14px; 
     font-weight: 500;
     display: block;
     padding: 8px;
@@ -214,7 +215,52 @@ nav ul li a i {
     transition: background-color 0.3s ease;
 }
 
-/* Cor de fundo ao passar o mouse sobre os itens do submenu */
+
 .submenu a:hover {
     background-color: #ffffff22;
 }
+
+
+.submenu-sub {
+    padding-left: 20px; 
+    display: block;
+    width: 100%;
+}
+
+.submenu-sub li {
+    list-style-type: none;
+    padding: 8px 15px;
+    width: 100%; 
+    box-sizing: border-box;
+    display: block;
+}
+
+.submenu-sub a {
+    text-decoration: none;
+    color: #ffffff;  
+    font-size: 14px;  
+    font-weight: 400;
+    padding: 6px 12px;
+    border-radius: 5px;
+    display: block;
+    transition: background-color 0.3s ease;
+}
+
+
+.submenu-sub a:hover {
+    background-color: #ffffff22;
+}
+
+
+.department.open .submenu-sub {
+    display: block;
+    margin-left: 20px; 
+    width: 100%;
+}
+
+
+.submenu {
+    max-height: 300px;  
+    overflow-y: auto;  
+}
+
