@@ -4,23 +4,47 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Home</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/css/all.min.css" integrity="sha512-Kc323vGBEqzTmouAECnVceyQqyqdsSiqLQISBL29aUW4U/M7pSPA/gEUZQqv1cwx4OnYxTxve5UMg5GT6L4JJg==" crossorigin="anonymous" referrerpolicy="no-referrer"/>
     <link rel="stylesheet" href="css/home.css">
+    <link rel="stylesheet" href="css/footer.css">
     <script defer src="js/home.js"></script>
 </head>
 <body>
-    <div class="container">
-        <div class="container-text">
-            <div class="content-text">
-                <h1>Notebook <br><span>Gamer</span> Dell <br> G15</h1>
-            </div>
-            <div class="content-about">
-                <p>Trabalho. Estudo. Jogos. Tudo em uma única opção.</p>
-            </div>
+
+    <section class="slider">
+        <div class="slider-content">
+            <input type="radio" name="btn-radio" id="radio1">
+            <input type="radio" name="btn-radio" id="radio2">
+            <input type="radio" name="btn-radio" id="radio3">
+        
+
+        <div class="slide-box primeiro">
+            <a href="#"><img src="./assets/img/carrossel 1.png" alt="" class="img-desktop"></a>
         </div>
-        <div class="container-img">
-            <img src="assets/img/notebook-gamer-dell-g15-i1300-a45p-intel-core-i5-16gb-nvidia-rtx-4050-ssd-512gb-15-6-fhd-windows-11-preto-210-bkyg_1707334557_gg 1.png" alt="notebook">
+        <div class="slide-box">
+            <a href="#"><img src="./assets/img/carrossel 2.png" alt="" class="img-desktop"></a>
         </div>
-    </div>
+        <div class="slide-box">
+            <a href="#"><img src="./assets/img/carrossel 3.png" alt="" class="img-desktop"></a>
+        </div>
+
+
+        <!-- .nav-auto>.auto-btn1*3 -->
+        <div class="nav-auto">
+            <div class="auto-btn1"></div>
+            <div class="auto-btn2"></div>
+            <div class="auto-btn3"></div>
+        </div>
+
+        <!-- .nav-manual>label.manual-btn*3 -->
+        <div class="nav-manual">
+            <label for="radio1" class="manual-btn"></label>
+            <label for="radio2" class="manual-btn"></label>
+            <label for="radio3" class="manual-btn"></label>
+        </div>
+
+        </div>
+    </section>
 
     <div class="container-ad">
         <div class="ad-left">
@@ -49,10 +73,6 @@
             <div class="categorias-text">
                 <div class="text">
                     <h1>Categorias</h1>
-                </div>
-                <div class="arrows">
-                    <a href="#"><img src="assets/img/seta_esq.png" alt=""></a>
-                    <a href="#"><img src="assets/img/seta_dir.png" alt=""></a>
                 </div>
             </div>
             <div class="categorias-card">
@@ -87,8 +107,8 @@
     <section class="produtos">
         <div class="tabs">
             <button class="tab-button tab-button1">Novos Produtos</button>
-            <button class="tab-button">Mais Vendidos</button>
-            <button class="tab-button">Pacotes em Destaque</button>
+            <button class="tab-button" id="opacidade">Mais Vendidos</button>
+            <button class="tab-button" id="opacidade">Pacotes em Destaque</button>
         </div>
 
         
@@ -166,6 +186,129 @@
                 <button class="card-botao">Comprar Agora</button>
             </div>
         </div>
+        <div class="promo-text">
+            <p>Produtos com 50% OFF</p>
+        </div>
+
+        <div class="produtos-grid">
+            <div class="produtos-card">
+                <img class="heart" src="assets/img/heart_disabled.png" alt="coração" onclick="AtivarCoracao(this)">
+
+                <img class="image-produto" src="assets/img/card-produto2.png" alt="">
+                <p>Monitor Gamer Curvo</p>
+                <p>GAMING MG700 27</p>
+                <h1>R$2535,99</h1>
+                <button class="card-botao">Comprar Agora</button>
+            </div>
+            <div class="produtos-card">
+                <img class="heart" src="assets/img/heart_disabled.png" alt="coração" onclick="AtivarCoracao(this)">
+
+                <img class="image-produto" src="assets/img/card-produto2.png" alt="">
+                <p>Monitor Gamer Curvo</p>
+                <p>GAMING MG700 27</p>
+                <h1>R$2535,99</h1>
+                <button class="card-botao">Comprar Agora</button>
+            </div>
+            <div class="produtos-card">
+                <img class="heart" src="assets/img/heart_disabled.png" alt="coração" onclick="AtivarCoracao(this)">
+
+                <img class="image-produto" src="assets/img/card-produto2.png" alt="">
+                <p>Monitor Gamer Curvo</p>
+                <p>GAMING MG700 27</p>
+                <h1>R$2535,99</h1>
+                <button class="card-botao">Comprar Agora</button>
+            </div>
+            <div class="produtos-card">
+                <img class="heart" src="assets/img/heart_disabled.png" alt="coração" onclick="AtivarCoracao(this)">
+
+                <img class="image-produto" src="assets/img/card-produto2.png" alt="">
+                <p>Monitor Gamer Curvo</p>
+                <p>GAMING MG700 27</p>
+                <h1>R$2535,99</h1>
+                <button class="card-botao">Comprar Agora</button>
+            </div>
+        </div>
     </section>
+    
+    <footer>
+        <div id="footer_content">
+            <div id="footer_contacts">
+                <img src="assets/img/logo.png" alt="Logo Tweeb" class="footer-logo">
+                <p class="footer-tagline">Sua conexão com o futuro, garantimos hoje.</p>
+                <div id="footer_social_midia">
+                    <a href="#"><i class="fa-brands fa-twitter"></i></a>
+                    <a href="#"><i class="fa-brands fa-facebook"></i></a>
+                    <a href="#"><i class="fa-brands fa-tiktok"></i></a>
+                    <a href="#"><i class="fa-brands fa-instagram"></i></a>  
+                </div>
+            </div>
+
+            <div class="espaco">
+                <ul class="footer_list">
+                    <li><h3>Contatos</h3></li>
+                    <li><a href="#" class="footer_link cursorevento">tweeb@comercial.com</a></li>
+                    <li><a href="#" class="footer_link cursorevento">(67) 1234-5678</a></li>
+                </ul>
+    
+                <ul class="footer_list">
+                    <li><h3>Institucional</h3></li>
+                    <li><a href="#" class="footer_link">Quem somos</a></li>
+                    <li><a href="#" class="footer_link">Localização</a></li>
+                    <li><a href="#" class="footer_link">Políticas do site</a></li>
+                </ul>
+    
+                <div class="footer_container">
+                    <ul class="footer_list">
+                        <li><h3>Departamentos</h3></li>
+                        <li><a href="#" class="footer_link">Computadores</a></li>
+                        <li><a href="#" class="footer_link">Hardwares</a></li>
+                        <li><a href="#" class="footer_link">Periféricos</a></li>
+                    </ul>
+                
+                    <ul class="footer_list direita">
+                        <li class="list_title"><h3></h3></li>
+                        <li><a href="#" class="footer_link">Energia</a></li>
+                        <li><a href="#" class="footer_link">Áudio</a></li>
+                        <li><a href="#" class="footer_link">Games</a></li>
+                    </ul>
+                </div>
+            </div>
+        
+            
+            </div>
+        </div>
+
+
+
+
+
+        <div class="mobile-view">
+            <div class="contatos">
+                <img src="assets/img/logo.png" alt="logo tweeb" class="footer-logo">
+                <p class="footer-tagline">Sua conexão com o futuro, garantimos hoje.</p>
+                <div id="footer_social_midia">
+                    <a href="#"><i class="fa-brands fa-twitter"></i></a>
+                    <a href="#"><i class="fa-brands fa-facebook"></i></a>
+                    <a href="#"><i class="fa-brands fa-tiktok"></i></a>
+                    <a href="#"><i class="fa-brands fa-instagram"></i></a>  
+                </div>
+            </div>
+            
+            <div class="mobile_direita">
+                <ul class="footer_list">
+                    <li><h3>Contatos</h3></li>
+                    <li><a href="#" class="footer_link cursorevento">tweeb@comercial.com</a></li>
+                    <li><a href="#" class="footer_link cursorevento">(67) 1234-5678</a></li>
+                </ul>
+                <ul class="footer_list">
+                    <li><h3>Institucional</h3></li>
+                    <li><a href="#" class="footer_link">Quem somos</a></li>
+                    <li><a href="#" class="footer_link">Localização</a></li>
+                    <li><a href="#" class="footer_link">Políticas do site</a></li>
+                </ul>
+            </div>
+        </div>
+    </footer>
+
 </body>
 </html>
