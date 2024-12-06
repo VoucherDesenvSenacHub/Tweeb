@@ -232,7 +232,7 @@ nav ul li a i {
     padding: 8px 15px;
     width: 100%; 
     box-sizing: border-box;
-    display: block;
+    display: inline;
 }
 
 .submenu-sub a {
@@ -242,7 +242,7 @@ nav ul li a i {
     font-weight: 400;
     padding: 6px 12px;
     border-radius: 5px;
-    display: block;
+    display: inline;
     transition: background-color 0.3s ease;
 }
 
