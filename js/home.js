@@ -6,6 +6,8 @@ function AtivarCoracao(coracao) {
     }
 }
 
+// fazer o primeiro carrossel trocar de imagem automaticamente, tem que melhorar isso depois.
+
 let radio = document.querySelector('.manual-btn');
 let cont = 1;
 document.getElementById('radio1').checked = true;
@@ -22,3 +24,36 @@ function proximaImagem(){
 
     document.getElementById('radio'+cont).checked = true
 }
+
+/* configuração do Swiper para o segundo carrossel. */
+
+let swiper = new Swiper('.swiper-container', {
+    slidesPerView: 3,
+    spaceBetween: 30,
+    loop: true,
+    grabCursor: true,
+    navigation: {
+        nextEl: '.swiper-button-next',
+        prevEl: '.swiper-button-prev',
+      },
+  });
+
+/* botão de voltar */
+
+// Obtem o botão
+const botaoVoltarAoTopo = document.getElementById("voltarAoTopo");
+
+// Mostrar o botão ao rolar a página
+window.onscroll = function() {
+    console.log(document.documentElement.scrollTop);
+    if (document.body.scrollTop > 3500 || document.documentElement.scrollTop > 3500) {
+        botaoVoltarAoTopo.style.display = "block";
+    } else {
+        botaoVoltarAoTopo.style.display = "none";
+    }
+};
+
+// Voltar ao topo ao clicar no botão
+botaoVoltarAoTopo.onclick = function() {
+    window.scrollTo({ top: 0, behavior: 'smooth' });
+};

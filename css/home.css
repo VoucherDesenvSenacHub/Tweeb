@@ -6,6 +6,7 @@
     padding: 0;
     box-sizing: border-box;
     font-family: "Montserrat", sans-serif;
+    scroll-behavior: smooth;
 }
 
 /* Define cores principais em variaveis */
@@ -247,6 +248,7 @@ span{
     width: 160px;
     border-radius: 15px;
     gap: 7px;
+    transition: 0.2s ease;
 }
 
 .card:hover{
@@ -307,7 +309,7 @@ span{
 /* Produtos */
 
 .produtos{
-    height: 1584px;
+    height: auto;
     background-color: white;
     display: flex;
     flex-direction: column;
@@ -391,6 +393,7 @@ span{
 .produtos-card .image-produto{
     width: 160px;
     height: 160px;
+    object-fit: cover;
     transition: 0.3s ease-in-out;
 }
 
@@ -409,6 +412,11 @@ span{
     background-color: var(--azul-intenso);
     color: white;
     cursor: pointer;
+    transition: 0.1s ease;
+}
+
+.card-botao:hover{
+    background-color: #170e2b;
 }
 
 #opacidade{
@@ -423,4 +431,103 @@ span{
     display: flex;
     font-weight: 500;
     font-size: 24px;
+}
+
+/* segundo carrossel */
+
+.swiper-container{
+    margin-top: 70px;
+    margin-bottom: 90px;
+    width: 100%;
+    height: auto;
+    position: relative;
+    overflow: hidden;
+}
+
+.swiper-slide img{
+    max-width: 100%;
+    max-height: 100%;
+    object-fit: contain;
+}
+
+/* Ajuste do tamanho da seta dentro do botão */
+.swiper-button-next::after, .swiper-button-prev::after {
+    font-size: 20px !important; 
+    color: #008ECC !important;
+} 
+
+.swiper-button-next, .swiper-button-prev {
+    position: absolute;
+    z-index: 10;
+    background-color: white;
+    border-radius: 50%;
+    padding: 35px;
+}
+
+/* altera a posição dos botões */
+.swiper-button-next{
+    transform: translateX(45%) !important;
+}
+.swiper-button-prev{
+    transform: translateX(-45%) !important;
+}
+
+/* anuncio abaixo */
+
+.img-anuncio{
+    width: 100%;
+    height: auto;
+    overflow: hidden;
+    margin-bottom: 90px;
+}
+
+.img-anuncio img{
+    max-width: 100%;
+    object-fit: cover;
+}
+
+/* hover nos cards de categoria */
+
+.card1:hover, .card6:hover{
+    background-color: #c0e499;
+}
+
+.card2:hover, .card5:hover{
+    background-color: #c5d6f6;
+}
+
+.card3:hover{
+    background-color: #b691f2;
+}
+
+.card4:hover{
+    background-color: #e27956;
+}
+
+/* botão de voltar */
+
+#voltarAoTopo {
+    display: none; /* Esconde o botão inicialmente */
+    position: fixed;
+    bottom: 20px;
+    right: 20px;
+    z-index: 1000;
+    background-color: var(--azul-intenso);
+    color: #000;
+    border: none;
+    border-radius: 50%;
+    width: 50px;
+    height: 50px;
+    font-size: 20px;
+    cursor: pointer;
+    box-shadow: 0px 0px 15px rgba(0, 0, 0, 0.2),
+    inset 0 0 0 4px white;
+    transition: opacity 0.3s, transform 0.3s;
+}
+
+#voltarAoTopo:hover {
+    background-color: var(--azul-claro);
+    border: none;
+    transform: scale(1.1);
+    color: var(--azul-intenso);
 }
