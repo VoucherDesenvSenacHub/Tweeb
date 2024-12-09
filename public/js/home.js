@@ -1,8 +1,8 @@
 function AtivarCoracao(coracao) {
-    if (coracao.src.includes('assets/img/heart_disabled.png')) {
-        coracao.src = 'assets/img/heart_enabled.png';
+    if (coracao.src.includes('public/assets/img/heart_disabled.png')) {
+        coracao.src = 'public/assets/img/heart_enabled.png';
     } else {
-        coracao.src = 'assets/img/heart_disabled.png';
+        coracao.src = 'public/assets/img/heart_disabled.png';
     }
 }
 
@@ -45,7 +45,6 @@ const botaoVoltarAoTopo = document.getElementById("voltarAoTopo");
 
 // Mostrar o botão ao rolar a página
 window.onscroll = function() {
-    console.log(document.documentElement.scrollTop);
     if (document.body.scrollTop > 3500 || document.documentElement.scrollTop > 3500) {
         botaoVoltarAoTopo.style.display = "block";
     } else {

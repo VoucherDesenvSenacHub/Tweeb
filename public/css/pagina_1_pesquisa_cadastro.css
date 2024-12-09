@@ -200,12 +200,14 @@
     height: 220px;
     justify-content: center;
     align-items: center;
-    transform: translateY(45%);
+    transform: translateY(40%);
 }
 
 .banner-imagem img{
-    width: 140px;
+    width: 220px;
     height: 220px;
+
+
 }
 
 .banner-imagem2 {
@@ -214,7 +216,7 @@
     height: 220px;
     justify-content: center;
     align-items: center;
-    transform: translateY(50%);
+    transform: translateY(43%);
 }
 
 
@@ -291,4 +293,8 @@ footer{
 
 .btn2:hover{
     background-color: #da6b6b;
+}
+
+.btn-text a{
+    color: #8692A6;
 }

@@ -200,14 +200,13 @@
     height: 220px;
     justify-content: center;
     align-items: center;
-    transform: translateY(40%);
+    transform: translateY(45%);
 }
 
 .banner-imagem img{
-    width: 220px;
+    width: 140px;
     height: 220px;
-
-
+    transform:translateY(-10%);
 }
 
 .banner-imagem2 {
@@ -216,7 +215,7 @@
     height: 220px;
     justify-content: center;
     align-items: center;
-    transform: translateY(43%);
+    transform: translateY(50%);
 }
 
 
@@ -226,12 +225,21 @@
 }
 
 /* textos container */
+.h1-card{
+    text-align: center;
+    font-size: 14px;
+    font-family: 'Poppins',sans-serif;
+    line-height: 15px;
+    transform: translateY(420%);
+
+}
+
 .h2-card{
     text-align: center;
     font-size: 14px;
     font-family: 'Poppins',sans-serif;
     line-height: 15px;
-    transform: translateY(300%);
+    transform: translateY(600%);
 
 }
 
@@ -239,9 +247,18 @@
     text-align: center;
     font-size: 12px;
     font-family: 'Poppins',sans-serif;
-    margin-top:110px;
+    margin-top:50%;
     line-height: 15px;
 
+}
+
+.p1-card{
+    text-align: center;
+    font-size: 12px;
+    font-family: 'Poppins',sans-serif;
+    margin-top:50%;
+    line-height: 15px;
+    transform: translateY(-40%);
 }
 
 
@@ -293,4 +310,8 @@ footer{
 
 .btn2:hover{
     background-color: #da6b6b;
-} 
+}
+
+.btn-text a{
+    color: #8692A6;
+}

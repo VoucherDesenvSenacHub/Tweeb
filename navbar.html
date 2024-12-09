@@ -4,13 +4,13 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Login</title>
-    <link rel="stylesheet" href="css/navbar.css">
+    <link rel="stylesheet" href="public/css/navbar.css">
     <link href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css' rel='stylesheet'>
 </head>
 <body>
     <header>
         <div class="logo">
-            <img src="assets/img/Ativo 2.png" alt="logo tweeb">
+            <img src="public/assets/img/Ativo 2.png" alt="logo tweeb">
         </div>
         <div class="search-box">
             <form action="">
@@ -23,27 +23,208 @@
                 <li><a href="#">Home</a></li>
                 <li><a href="#">Sobre</a></li>
                 <li><a href="#">Orçamento</a></li>
-                <li class="dropdown">
-                     <label for="toggle-dept">Departamentos</label>
-                    <input type="checkbox" id="toggle-dept">
-                    <ul class="submenu">
-                      <li><a href="#"><img src="assets/img/Hardwares.png" alt="hardwares" class="submenu-icon">Hardwares</a></li>
-                      <li><a href="#"><img src="assets/img/Computadores.png" alt="computadores" class="submenu-icon">Computadores</a></li>
-                      <li><a href="#"><img src="assets/img/Perifericos.png" alt="perifericos" class="submenu-icon">Perifericos</a></li>
-                      <li><a href=""><img src="assets/img/Energia.png" alt="energia" class="submenu-icon">Energia</a></li>
-                      <li><a href=""><img src="assets/img/audio.png" alt="audio" class="submenu-icon">Audio</a></li>
-                      <li><a href=""><img src="assets/img/Jogos.png" alt="jogos" class="submenu-icon">Jogos</a></li>
-                    </ul>
-                  </li>
                 <li><a href="#">Cadastre-se</a></li>
                 <li>
-                    <a href="#"><i class='bx bx-heart'></i></a>
                     <a href="#"><i class='bx bx-cart-alt'></i></a>
                     <a href="#"><i class='bx bx-user'></i></a>
                 </li>
             </ul>
         </nav>
     </header>
+
+    <!-- Barra de departamentos -->
+    <section class="departments-bar">
+        <div class="department">
+            <img src="public/assets/img/Hardwares.png" alt="Hardwares">
+            <span>Hardwares <i class='bx bx-chevron-down'></i></span>
+            <ul class="submenu">
+                <li>
+                    <a href="#">Placa Mãe</a>
+                    <ul class="submenu-sub">
+                        <li><a href="#">Tipo de Placa Mãe 1</a></li>
+                        <li><a href="#">Tipo de Placa Mãe 2</a></li>
+                        <li><a href="#">Tipo de Placa Mãe 3</a></li>
+                    </ul>
+                </li>
+                <li>
+                    <a href="#">Placa de Vídeo</a>
+                    <ul class="submenu-sub">
+                        <li><a href="#">Tipo de Placa Mãe 1</a></li>
+                        <li><a href="#">Tipo de Placa Mãe 2</a></li>
+                        <li><a href="#">Tipo de Placa Mãe 3</a></li>
+                    </ul>
+                </li>
+                <li>
+                    <a href="#">Memórias</a>
+                    <ul class="submenu-sub">
+                        <li><a href="#">Tipo de Placa Mãe 1</a></li>
+                        <li><a href="#">Tipo de Placa Mãe 2</a></li>
+                        <li><a href="#">Tipo de Placa Mãe 3</a></li>
+                    </ul>
+                </li>
+                <li>
+                    <a href="#">Coolers</a>
+                    <ul class="submenu-sub">
+                        <li><a href="#">Tipo de Placa Mãe 1</a></li>
+                        <li><a href="#">Tipo de Placa Mãe 2</a></li>
+                        <li><a href="#">Tipo de Placa Mãe 3</a></li>
+                    </ul>
+                </li>
+                <li>
+                    <a href="#">Fonte de Alimentação</a>
+                    <ul class="submenu-sub">
+                        <li><a href="#">Tipo de Placa Mãe 1</a></li>
+                        <li><a href="#">Tipo de Placa Mãe 2</a></li>
+                        <li><a href="#">Tipo de Placa Mãe 3</a></li>
+                    </ul>
+                </li>
+            </ul>
+        </div>
+        <span class="separator">|</span>
+        <div class="department">
+            <img src="public/assets/img/Computadores.png" alt="Computadores">
+            <span>Computadores <i class='bx bx-chevron-down'></i></span>
+            <ul class="submenu">
+                <li>
+                    <a href="#">Desktop</a>
+                    <ul class="submenu-sub">
+                        <li><a href="#">Tipo de Placa Mãe 1</a></li>
+                        <li><a href="#">Tipo de Placa Mãe 2</a></li>
+                        <li><a href="#">Tipo de Placa Mãe 3</a></li>
+                    </ul>
+                
+                </li>
+                <li>
+                    <a href="#">Notebook</a>
+                    <ul class="submenu-sub">
+                        <li><a href="#">Tipo de Placa Mãe 1</a></li>
+                        <li><a href="#">Tipo de Placa Mãe 2</a></li>
+                        <li><a href="#">Tipo de Placa Mãe 3</a></li>
+                    </ul>
+                </li>
+            </ul>
+        </div>
+        <span class="separator">|</span>
+        <div class="department">
+            <img src="public/assets/img/Perifericos.png" alt="Periféricos">
+            <span>Periféricos <i class='bx bx-chevron-down'></i></span>
+            <ul class="submenu">
+                <li>
+                    <a href="#">Teclados</a>
+                    <ul class="submenu-sub">
+                        <li><a href="#">Tipo de Placa Mãe 1</a></li>
+                        <li><a href="#">Tipo de Placa Mãe 2</a></li>
+                        <li><a href="#">Tipo de Placa Mãe 3</a></li>
+                    </ul>
+                </li>
+                <li>
+                    <a href="#">Mouses</a>
+                    <ul class="submenu-sub">
+                        <li><a href="#">Tipo de Placa Mãe 1</a></li>
+                        <li><a href="#">Tipo de Placa Mãe 2</a></li>
+                        <li><a href="#">Tipo de Placa Mãe 3</a></li>
+                    </ul>
+                </li>
+                <li>
+                    <a href="#">Headsets</a>
+                    <ul class="submenu-sub">
+                        <li><a href="#">Tipo de Placa Mãe 1</a></li>
+                        <li><a href="#">Tipo de Placa Mãe 2</a></li>
+                        <li><a href="#">Tipo de Placa Mãe 3</a></li>
+                    </ul>
+                </li>
+            </ul>
+        </div>
+        <span class="separator">|</span>
+        <div class="department">
+            <img src="public/assets/img/Energia.png" alt="Energia">
+            <span>Energia <i class='bx bx-chevron-down'></i></span>
+            <ul class="submenu">
+                <li>
+                    <a href="#">Fontes</a>
+                    <ul class="submenu-sub">
+                        <li><a href="#">Tipo de Placa Mãe 1</a></li>
+                        <li><a href="#">Tipo de Placa Mãe 2</a></li>
+                        <li><a href="#">Tipo de Placa Mãe 3</a></li>
+                    </ul>
+                
+                </li>
+                <li>
+                    <a href="#">No-breaks</a>
+                    <ul class="submenu-sub">
+                        <li><a href="#">Tipo de Placa Mãe 1</a></li>
+                        <li><a href="#">Tipo de Placa Mãe 2</a></li>
+                        <li><a href="#">Tipo de Placa Mãe 3</a></li>
+                    </ul>
+                
+                </li>
+            </ul>
+        </div>
+        <span class="separator">|</span>
+        <div class="department">
+            <img src="public/assets/img/audio.png" alt="Áudio">
+            <span>Áudio <i class='bx bx-chevron-down'></i></span>
+            <ul class="submenu">
+                <li>
+                    <a href="#">Caixas de som</a>
+                    <ul class="submenu-sub">
+                        <li><a href="#">Tipo de Placa Mãe 1</a></li>
+                        <li><a href="#">Tipo de Placa Mãe 2</a></li>
+                        <li><a href="#">Tipo de Placa Mãe 3</a></li>
+                    </ul>
+                </li>
+                <li>
+                    <a href="#">Fones de ouvido</a>
+                    <ul class="submenu-sub">
+                        <li><a href="#">Tipo de Placa Mãe 1</a></li>
+                        <li><a href="#">Tipo de Placa Mãe 2</a></li>
+                        <li><a href="#">Tipo de Placa Mãe 3</a></li>
+                    </ul>
+                
+                </li>
+            </ul>
+        </div>
+        <span class="separator">|</span>
+        <div class="department">
+            <img src="public/assets/img/Jogos.png" alt="Jogos">
+            <span>Jogos <i class='bx bx-chevron-down'></i></span>
+            <ul class="submenu">
+                <li>
+                    <a href="#">Jogos para PC</a>
+                    <ul class="submenu-sub">
+                        <li><a href="#">Tipo de Placa Mãe 1</a></li>
+                        <li><a href="#">Tipo de Placa Mãe 2</a></li>
+                        <li><a href="#">Tipo de Placa Mãe 3</a></li>
+                    </ul>
+                </li>
+                <li>
+                    <a href="#">Acessórios para Games</a>
+                    <ul class="submenu-sub">
+                        <li><a href="#">Tipo de Placa Mãe 1</a></li>
+                        <li><a href="#">Tipo de Placa Mãe 2</a></li>
+                        <li><a href="#">Tipo de Placa Mãe 3</a></li>
+                    </ul>
+        
+                </li>
+            </ul>
+        </div>
+    </section>
+
+    <script>
+        const departments = document.querySelectorAll('.department');
+        departments.forEach(department => {
+            department.addEventListener('mouseenter', () => {
+                const submenu = department.querySelector('.submenu');
+                submenu.style.opacity = '1';
+                submenu.style.visibility = 'visible';
+            });
+
+            department.addEventListener('mouseleave', () => {
+                const submenu = department.querySelector('.submenu');
+                submenu.style.opacity = '0';
+                submenu.style.visibility = 'hidden';
+            });
+        });
+    </script>
 </body>
 </html>
-

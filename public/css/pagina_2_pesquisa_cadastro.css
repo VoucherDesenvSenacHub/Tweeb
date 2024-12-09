@@ -206,6 +206,7 @@
 .banner-imagem img{
     width: 220px;
     height: 220px;
+    margin-top: 20%;
 
 
 }
@@ -226,6 +227,28 @@
 }
 
 /* textos container */
+
+
+.h1-card{
+    text-align: center;
+    font-size: 14px;
+    font-family: 'Poppins',sans-serif;
+    line-height: 15px;
+    transform: translateY(350%);
+
+}
+
+.p1-card{
+    text-align: center;
+    font-size: 12px;
+    font-family: 'Poppins',sans-serif;
+    margin-top:50%;
+    transform: translateY(10%);
+    line-height: 15px;
+
+}
+
+
 .h2-card{
     text-align: center;
     font-size: 14px;
@@ -293,4 +316,8 @@ footer{
 
 .btn2:hover{
     background-color: #da6b6b;
+}
+
+.btn-text a{
+    color: #8692A6;
 }
