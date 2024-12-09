@@ -1,6 +1,5 @@
 @import url('https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
-@import url('https://fonts.googleapis.com/css2?family=Inder&family=Montserrat+Alternates:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
-
+@import url('https://fonts.googleapis.com/css2?family=Inder&family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&family=Montserrat+Alternates:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
 * {
     margin: 0;
     padding: 0;
@@ -26,22 +25,25 @@ main{
     flex-direction: column;
     justify-content: space-between;
     background-color: #ffffff;
-    height: 100vh;
-    border-radius:  0px 20px 20px 0px;
+    height: 95vh;
+    border-radius:  0px 12px 12px 0px;
     position: relative;
     transition: all .5s;
     min-width: 82px;
+    gap: 24px;
+    right: 1px;
     z-index: 2; 
     box-shadow: 2px 0 5px rgba(0, 0, 0, 0.1);
 }
 #sidebar_content{
     padding: 12px;
+    padding-left: 25px;
 }
 #user{
     display: flex;
     align-items: center;
-    margin-top: 55px;
-    gap: 8px;
+    margin-top: 10px;
+    gap: 12px;
     margin-bottom: 24px;
 
 }
@@ -54,14 +56,26 @@ main{
 }
 #user_infos{
     display: flex;
-    font-family: 'Poppins';
     font-size: 14px;
     flex-direction: column;
 }
 #user_infos span:last-child{
     color: #0a0a0a;
     font-size: 16px;
+    font-family: 'Poppins';
+    font-weight: 600;
+    line-height: 20px;
 }
+.linha {
+    height: 2px; 
+    background-color: #F6F6F6;
+    margin: 10px 0; 
+    width: 90%;
+    gap: 0px;
+    border-radius: 2px 0px 0px 0px;
+    opacity: 0px;
+    
+  }
 .menu{
     display: flex;
     flex-direction: column;
@@ -113,16 +127,17 @@ main{
     margin-top: 0;
 }
 .submenu li a{
-    font-size: 16px;
+    font-size: 12px;
     color: #0a0a0a;
     padding: 12px;
     border-radius: 5px;
     text-decoration: none;
     font-family: 'Inder';
+    font-weight: 500;
 }
 .submenu li a:hover{
     background-color: #D4E3FF;
-    color: #0a0a0a;
+    color: #455A64;
 }
 .menu-item.active{
     background-color: #ffffff;
@@ -179,7 +194,10 @@ main{
     align-items: center;
     text-decoration: none;
     color: inherit;
-    font-size: 16px;
+    font-family:'Inter';
+    font-size: 14px;
+    font-family: Inter;
+    font-weight: 500;
     gap: 12px;
     white-space: nowrap;
 }
@@ -200,13 +218,13 @@ main{
 }
 #open_btn{
     position: absolute;
-    top: 40px;
-    right: -24px;
+    top: 30px;
+    right: -16px;
     background-color: #FFFFFF;
     color: #0a0a0a;
-    border-radius: 7px;
-    width: 35px;
-    height: 35px;
+    border-radius: 8px;
+    width: 28px;
+    height: 28px;
     border: none;
     cursor: pointer;
     display: flex;
@@ -216,6 +234,9 @@ main{
 }
 #open_btn_icon{
     transition: transform .3s ease;
+}
+#open_btn:hover{
+    transform: scale(1.1);
 }
 .open-sidebar #open_btn_icon{
     transform: rotate(180deg);
@@ -228,7 +249,7 @@ main{
     color: #0a0a0a;
 }
 .has-submenu .submenu li.active a{
-    background-color: #4f46e5;
+    background-color: #D4E3FF;
     color: #0a0a0a;
 }
 
@@ -240,6 +261,9 @@ main{
     font-size: 14px;
     transition: width .6s;
     height: 0px;
+    font-family:'Inter';
+    font-size: 14px;
+    font-weight: 500;
 }
 
  */
