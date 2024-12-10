@@ -26,3 +26,18 @@ document.addEventListener('click', () => {
         department.classList.remove('open');
     });
 });
+
+    const departaments = document.querySelectorAll('.department');
+    departaments.forEach(department => {
+        department.addEventListener('mouseenter', () => {
+            const submenu = department.querySelector('.submenu');
+            submenu.style.opacity = '1';
+            submenu.style.visibility = 'visible';
+            });
+
+        department.addEventListener('mouseleave', () => {
+            const submenu = department.querySelector('.submenu');
+            submenu.style.opacity = '0';
+            submenu.style.visibility = 'hidden';
+        });
+    });

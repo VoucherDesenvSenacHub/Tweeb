@@ -64,5 +64,6 @@ if($usuario){
         <div class="image-container">
             <img src="../../assets/img/Group 4.png" alt="img-login">
         </div>
+        <?php include('../Tweeb/Includes/navbar.php'); ?>
 </body>
 </html>
