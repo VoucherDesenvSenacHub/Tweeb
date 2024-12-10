@@ -9,11 +9,12 @@
 
 body {
     background-color: rgb(255, 255, 255);
+    height: 100%;
 }
 
 header {
     width: 100%;/*faz o cabeçalho ocupar toda a largura da pag*/
-    height: 100px;/*define a altura do cabeçalho*/
+    height: 100px   ;/*define a altura do cabeçalho*/
     display: flex;
     align-items: center;
     position: relative;
@@ -358,7 +359,7 @@ nav ul li a i {
     justify-content: center;
     align-items: center;
     width: 100%;
-    height: 100%;
+    height: auto;
     gap: 26px;
     margin-top: 2vh;
 }
@@ -369,7 +370,7 @@ nav ul li a i {
     align-items: center;
     justify-content: center;
     width: 80%;
-    height: 15vh;
+    height: 100px;
     background-color: #f5f5f5;
 }
 
@@ -434,6 +435,66 @@ nav ul li a i {
     justify-content: center;    
 }
 
+.continue-button-countainer{
+    width: 100%;
+    height: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.continue-button{
+    width: 248px;
+    height: 64px;
+    background-color:#291E40;
+    margin-top: 128px;
+    transform: translateX(194%);
+    border-radius: 6px;
+    cursor: pointer;
+    margin-bottom: 23.9%;
+}
+
+.continue-button a{
+    color: white;
+    text-decoration: none;
+}
+
+#left-arrow{
+    cursor: pointer;
+}
+
+#right-arrow{
+    cursor: pointer;
+}
+
+#bottom-arrow{
+    cursor: pointer;
+}
+
+.pagination-countainer{
+    height: 100%;
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: row;
+    gap: 16px;
+    margin-top: 48px;
+}
+
+.page-cube{
+    width: 30px;
+    height: 32px;
+    border-radius: 5px;
+    background-color: black;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.page-number{
+    color: white;
+}
 
 
 
@@ -446,11 +507,6 @@ nav ul li a i {
 
 
 
-
-
-
-
-/*FOOTER
 
 
  @import url('https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&display=swap');
@@ -644,5 +700,5 @@ footer {
         right: 0;
         margin-bottom: 25px;
     }
-  } */
+  }
   
