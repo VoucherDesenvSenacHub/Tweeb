@@ -436,18 +436,24 @@ span{
 /* segundo carrossel */
 
 .swiper-container{
-    margin-top: 70px;
-    margin-bottom: 90px;
+    margin-top: 200px;
+    margin-bottom: 230px;
     width: 100%;
     height: auto;
     position: relative;
     overflow: hidden;
 }
 
+.swiper-slide{
+    display: flex !important;
+    justify-content: space-evenly !important;
+    align-items: center !important;
+}
+
 .swiper-slide img{
-    max-width: 100%;
-    max-height: 100%;
-    object-fit: contain;
+    width: auto;
+    height: 500px;
+    object-fit: cover;
 }
 
 /* Ajuste do tamanho da seta dentro do botão */
@@ -482,8 +488,8 @@ span{
 }
 
 .img-anuncio img{
-    max-width: 100%;
-    object-fit: cover;
+    width: 100%;
+    height: 550px;
 }
 
 /* hover nos cards de categoria */

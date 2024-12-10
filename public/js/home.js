@@ -29,13 +29,25 @@ function proximaImagem(){
 
 let swiper = new Swiper('.swiper-container', {
     slidesPerView: 3,
-    spaceBetween: 30,
+    spaceBetween: -30,
     loop: true,
     grabCursor: true,
     navigation: {
         nextEl: '.swiper-button-next',
         prevEl: '.swiper-button-prev',
       },
+      breakpoints: {
+        1300: {
+          slidesPerView: 3,
+        },
+        // arrumar na responsividade
+        600: {
+            slidesPerView: 1,
+            spaceBetween: 20,
+            autoHeight: true,
+            direction: 'vertical'
+          },
+      }
   });
 
 /* botão de voltar */
