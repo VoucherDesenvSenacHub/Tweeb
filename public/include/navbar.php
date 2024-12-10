@@ -195,3 +195,4 @@
         </ul>
     </div>
 </section>
+<script src="public/js/navbar.js"></script>

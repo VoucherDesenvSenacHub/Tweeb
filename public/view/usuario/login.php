@@ -1,6 +1,7 @@
 <?php
 
 require '../../../Entity/Usuario.php'; // ALTERE O DIRETORIO CONFORME ESTIVER SALVO NO SEU LOCAL
+include("../../../public/include/navbar.php");
 
 if ($_SERVER['REQUEST_METHOD'] === 'POST') {
     
@@ -65,9 +66,5 @@ if($usuario){
         <div class="image-container">
             <img src="../../assets/img/Group 4.png" alt="img-login">
         </div>
-        <?php
-            include("./Includes/navbar.php");
-            echo "Navbar incluída com sucesso!";
-        ?>
 </body>
 </html>
