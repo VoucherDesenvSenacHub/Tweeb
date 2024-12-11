@@ -1,16 +1,15 @@
-// Seleciona todas as divisões de departamento
+// Seleciona todos os departamentos
 const departments = document.querySelectorAll('.department');
 
-// Para cada departamento, adiciona um evento de clique
+// Para cada departamento, adiciona um evento de clique para abrir/fechar o submenu principal
 departments.forEach(department => {
     department.addEventListener('click', (event) => {
-        // Impede que o clique no departamento feche o submenu imediatamente
-        event.stopPropagation();
+        event.stopPropagation();  // Impede que o clique no departamento feche o submenu imediatamente
 
-        // Alterna a classe 'open' no departamento, o que controlará a visibilidade do submenu
+        // Alterna a classe 'open' no departamento, controlando a visibilidade do submenu principal
         department.classList.toggle('open');
-        
-        // Fecha todos os outros submenus (opcional, dependendo do comportamento desejado)
+
+        // Fecha todos os outros submenus principais (opcional, dependendo do comportamento desejado)
         departments.forEach(dep => {
             if (dep !== department) {
                 dep.classList.remove('open');
@@ -19,25 +18,60 @@ departments.forEach(department => {
     });
 });
 
-// Fecha os submenus se o usuário clicar fora do menu
+// Seleciona todos os itens de submenu (os departamentos específicos como "Placa Mãe", "Placa de Vídeo", etc.)
+const menuItems = document.querySelectorAll('.submenu > li > a');
+
+// Adiciona o evento de clique para abrir/fechar o submenu de tipos
+menuItems.forEach(item => {
+    // Define a rotação da seta inicialmente para a direita
+    const arrow = item.querySelector('i');
+    arrow.style.transform = 'rotate(0deg)'; // Faz com que a seta inicie virada para a direita
+
+    item.addEventListener('click', (event) => {
+        event.preventDefault();  // Impede o comportamento padrão do link
+        event.stopPropagation();  // Impede que o clique no item feche o submenu principal
+
+        // Pega o submenu dos tipos
+        const submenuSub = item.nextElementSibling;  // Submenu de tipos (ul)
+
+        // Alterna a visibilidade do submenu dos tipos
+        if (submenuSub && submenuSub.style.display !== 'block') {
+            submenuSub.style.display = 'block';  // Abre o submenu dos tipos
+            // Roda a seta para baixo
+            arrow.style.transform = 'rotate(90deg)';
+        } else {
+            submenuSub.style.display = 'none';  // Fecha o submenu dos tipos
+            // Roda a seta para a direita
+            arrow.style.transform = 'rotate(0deg)';
+        }
+    });
+});
+
+// Fecha todos os submenus quando o usuário clica fora do menu
 document.addEventListener('click', () => {
+    const submenus = document.querySelectorAll('.submenu-sub');
+    submenus.forEach(submenu => {
+        submenu.style.display = 'none';  // Fecha todos os submenus de tipos ao clicar fora
+    });
+
+    // Fecha todos os submenus principais ao clicar fora
     const openDepartments = document.querySelectorAll('.department.open');
     openDepartments.forEach(department => {
         department.classList.remove('open');
     });
 });
 
-    const departaments = document.querySelectorAll('.department');
-    departaments.forEach(department => {
-        department.addEventListener('mouseenter', () => {
-            const submenu = department.querySelector('.submenu');
-            submenu.style.opacity = '1';
-            submenu.style.visibility = 'visible';
-            });
+const userIcon = document.querySelector('.user-icon');
+const userSubmenu = document.querySelector('.user-submenu');
 
-        department.addEventListener('mouseleave', () => {
-            const submenu = department.querySelector('.submenu');
-            submenu.style.opacity = '0';
-            submenu.style.visibility = 'hidden';
-        });
-    });
+// Adiciona um evento de clique no ícone do usuário
+userIcon.addEventListener('click', (event) => {
+    event.stopPropagation(); // Impede que o clique no ícone se propague para o documento e feche o submenu imediatamente
+    // Alterna a visibilidade do submenu
+    userSubmenu.style.display = userSubmenu.style.display === 'block' ? 'none' : 'block';
+});
+
+// Fecha o submenu se o usuário clicar fora do ícone
+document.addEventListener('click', () => {
+    userSubmenu.style.display = 'none'; // Fecha o submenu
+});
