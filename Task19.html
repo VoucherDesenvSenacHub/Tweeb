@@ -1,20 +1,24 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="pt-br">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="public/css/navbar.css">
     <link rel="stylesheet" href="public/css/Task19.css">
     <link href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css' rel='stylesheet'>
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/css/all.min.css" integrity="sha512-Kc323vGBEqzTmouAECnVceyQqyqdsSiqLQISBL29aUW4U/M7pSPA/gEUZQqv1cwx4OnYxTxve5UMg5GT6L4JJg==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap" rel="stylesheet">
+
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap" rel="stylesheet">
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap" rel="stylesheet">
-    <title>Do seu jeito</title>
+
+    <title>Tweeb</title>
 </head>
-<body>
+<body class="do-seu-jeito-body">
     <header>
         <div class="logo">
             <img src="public/assets/img/Ativo 2.png" alt="logo tweeb">
@@ -33,7 +37,13 @@
                 <li><a href="#">Cadastre-se</a></li>
                 <li>
                     <a href="#"><i class='bx bx-cart-alt'></i></a>
-                    <a href="#"><i class='bx bx-user'></i></a>
+                    <a href="#" class="user-icon">
+                        <i class='bx bx-user'></i>
+                        <ul class="user-submenu">
+                            <li><a href="Login.html">Login</a></li>
+                            <li><a href="#">Cadastro</a></li>
+                        </ul>
+                    </a>
                 </li>
             </ul>
         </nav>
@@ -46,7 +56,7 @@
             <span>Hardwares <i class='bx bx-chevron-down'></i></span>
             <ul class="submenu">
                 <li>
-                    <a href="#">Placa Mãe</a>
+                    <a href="#" class="toggle-submenu">Placa Mãe <i class='bx bx-chevron-right'></i></a>
                     <ul class="submenu-sub">
                         <li><a href="#">Tipo de Placa Mãe 1</a></li>
                         <li><a href="#">Tipo de Placa Mãe 2</a></li>
@@ -54,7 +64,7 @@
                     </ul>
                 </li>
                 <li>
-                    <a href="#">Placa de Vídeo</a>
+                    <a href="#" class="toggle-submenu">Placa de Video <i class='bx bx-chevron-right'></i></a>
                     <ul class="submenu-sub">
                         <li><a href="#">Tipo de Placa Mãe 1</a></li>
                         <li><a href="#">Tipo de Placa Mãe 2</a></li>
@@ -62,7 +72,7 @@
                     </ul>
                 </li>
                 <li>
-                    <a href="#">Memórias</a>
+                    <a href="#"class="toggle-submenu">Memorias <i class='bx bx-chevron-right'></i></a>
                     <ul class="submenu-sub">
                         <li><a href="#">Tipo de Placa Mãe 1</a></li>
                         <li><a href="#">Tipo de Placa Mãe 2</a></li>
@@ -70,7 +80,7 @@
                     </ul>
                 </li>
                 <li>
-                    <a href="#">Coolers</a>
+                    <a href="#"class="toggle-submenu">Coolers <i class='bx bx-chevron-right'></i></a>
                     <ul class="submenu-sub">
                         <li><a href="#">Tipo de Placa Mãe 1</a></li>
                         <li><a href="#">Tipo de Placa Mãe 2</a></li>
@@ -78,7 +88,7 @@
                     </ul>
                 </li>
                 <li>
-                    <a href="#">Fonte de Alimentação</a>
+                    <a href="#"class="toggle-submenu">Fonte de Alimentação <i class='bx bx-chevron-right'></i></a>
                     <ul class="submenu-sub">
                         <li><a href="#">Tipo de Placa Mãe 1</a></li>
                         <li><a href="#">Tipo de Placa Mãe 2</a></li>
@@ -93,7 +103,7 @@
             <span>Computadores <i class='bx bx-chevron-down'></i></span>
             <ul class="submenu">
                 <li>
-                    <a href="#">Desktop</a>
+                    <a href="#"class="toggle-submenu">Desktop<i class='bx bx-chevron-right'></i></a>
                     <ul class="submenu-sub">
                         <li><a href="#">Tipo de Placa Mãe 1</a></li>
                         <li><a href="#">Tipo de Placa Mãe 2</a></li>
@@ -102,7 +112,7 @@
                 
                 </li>
                 <li>
-                    <a href="#">Notebook</a>
+                    <a href="#"class="toggle-submenu">Notebook <i class='bx bx-chevron-right'></i></a>
                     <ul class="submenu-sub">
                         <li><a href="#">Tipo de Placa Mãe 1</a></li>
                         <li><a href="#">Tipo de Placa Mãe 2</a></li>
@@ -117,7 +127,7 @@
             <span>Periféricos <i class='bx bx-chevron-down'></i></span>
             <ul class="submenu">
                 <li>
-                    <a href="#">Teclados</a>
+                    <a href="#"class="toggle-submenu">Teclados <i class='bx bx-chevron-right'></i></a>
                     <ul class="submenu-sub">
                         <li><a href="#">Tipo de Placa Mãe 1</a></li>
                         <li><a href="#">Tipo de Placa Mãe 2</a></li>
@@ -125,7 +135,7 @@
                     </ul>
                 </li>
                 <li>
-                    <a href="#">Mouses</a>
+                    <a href="#"class="toggle-submenu">Mouses <i class='bx bx-chevron-right'></i></a>
                     <ul class="submenu-sub">
                         <li><a href="#">Tipo de Placa Mãe 1</a></li>
                         <li><a href="#">Tipo de Placa Mãe 2</a></li>
@@ -133,7 +143,7 @@
                     </ul>
                 </li>
                 <li>
-                    <a href="#">Headsets</a>
+                    <a href="#"class="toggle-submenu">Headsets <i class='bx bx-chevron-right'></i></a>
                     <ul class="submenu-sub">
                         <li><a href="#">Tipo de Placa Mãe 1</a></li>
                         <li><a href="#">Tipo de Placa Mãe 2</a></li>
@@ -148,7 +158,7 @@
             <span>Energia <i class='bx bx-chevron-down'></i></span>
             <ul class="submenu">
                 <li>
-                    <a href="#">Fontes</a>
+                    <a href="#"class="toggle-submenu">Fontes <i class='bx bx-chevron-right'></i></a>
                     <ul class="submenu-sub">
                         <li><a href="#">Tipo de Placa Mãe 1</a></li>
                         <li><a href="#">Tipo de Placa Mãe 2</a></li>
@@ -157,7 +167,7 @@
                 
                 </li>
                 <li>
-                    <a href="#">No-breaks</a>
+                    <a href="#"class="toggle-submenu">No-Breaks <i class='bx bx-chevron-right'></i></a>
                     <ul class="submenu-sub">
                         <li><a href="#">Tipo de Placa Mãe 1</a></li>
                         <li><a href="#">Tipo de Placa Mãe 2</a></li>
@@ -173,7 +183,7 @@
             <span>Áudio <i class='bx bx-chevron-down'></i></span>
             <ul class="submenu">
                 <li>
-                    <a href="#">Caixas de som</a>
+                    <a href="#"class="toggle-submenu">Caixas de Som <i class='bx bx-chevron-right'></i></a>
                     <ul class="submenu-sub">
                         <li><a href="#">Tipo de Placa Mãe 1</a></li>
                         <li><a href="#">Tipo de Placa Mãe 2</a></li>
@@ -181,7 +191,7 @@
                     </ul>
                 </li>
                 <li>
-                    <a href="#">Fones de ouvido</a>
+                    <a href="#"class="toggle-submenu">Fones de Ouvido <i class='bx bx-chevron-right'></i></a>
                     <ul class="submenu-sub">
                         <li><a href="#">Tipo de Placa Mãe 1</a></li>
                         <li><a href="#">Tipo de Placa Mãe 2</a></li>
@@ -197,7 +207,7 @@
             <span>Jogos <i class='bx bx-chevron-down'></i></span>
             <ul class="submenu">
                 <li>
-                    <a href="#">Jogos para PC</a>
+                    <a href="#"class="toggle-submenu">Jogos Para PC <i class='bx bx-chevron-right'></i></a>
                     <ul class="submenu-sub">
                         <li><a href="#">Tipo de Placa Mãe 1</a></li>
                         <li><a href="#">Tipo de Placa Mãe 2</a></li>
@@ -205,7 +215,7 @@
                     </ul>
                 </li>
                 <li>
-                    <a href="#">Acessórios para Games</a>
+                    <a href="#"class="toggle-submenu">Acessórios Para Games <i class='bx bx-chevron-right'></i></a>
                     <ul class="submenu-sub">
                         <li><a href="#">Tipo de Placa Mãe 1</a></li>
                         <li><a href="#">Tipo de Placa Mãe 2</a></li>
@@ -216,262 +226,162 @@
             </ul>
         </div>
     </section>
+    <script src="public/js/js_task19.js"></script>
 
-    <script>
-        const departments = document.querySelectorAll('.department');
-        departments.forEach(department => {
-            department.addEventListener('mouseenter', () => {
-                const submenu = department.querySelector('.submenu');
-                submenu.style.opacity = '1';
-                submenu.style.visibility = 'visible';
-            });
 
-            department.addEventListener('mouseleave', () => {
-                const submenu = department.querySelector('.submenu');
-                submenu.style.opacity = '0';
-                submenu.style.visibility = 'hidden';
-            });
-        });
-    </script>
-    <img src="public/assets/img/banner-do-seu-jeito.png" alt="Banner" class="banner1">
+    <!--############################################FIM NAV BAR############################################-->
 
-    <!-- <div class="countainer-components">
-        <div class="components">
-          <ul class="ul-components">
-            <li class="processador"><a href="#">Processador</a></li>
-            <li class="placa-mae"><a href="#">Placa Mãe</a></li>
-            <li class="ram"><a href="#">RAM</a></li>
-            <li class="placa-de-video"><a href="#">Placa de Vídeo</a></li>
-            <li class="hd-e-ssd"><a href="#">HD e SSD</a></li>
-            <li class="gabinete"><a href="#">Gabinete</a></li>
-            <li class="alimentação"><a href="#">Alimentação</a></li>
-            <li class="perifericos"><a href="#">Periféricos</a></li>
-            <li class="revisao"><a href="#">Revisão</a></li>
+    <img src="public/assets/img/banner-do-seu-jeito.png" alt="Banner" class="do-seu-jeito-banner1">
+
+    <div class="do-seu-jeito-countainer-components">
+        <div class="do-seu-jeito-components">
+          <ul class="do-seu-jeito-ul-components">
+            <li class="do-seu-jeito-processador"><a href="#">Processador</a></li>
+            <li class="do-seu-jeito-placa-mae"><a href="#">Placa Mãe</a></li>
+            <li class="do-seu-jeito-ram"><a href="#">RAM</a></li>
+            <li class="do-seu-jeito-placa-de-video"><a href="#">Placa de Vídeo</a></li>
+            <li class="do-seu-jeito-hd-e-ssd"><a href="#">HD e SSD</a></li>
+            <li class="do-seu-jeito-gabinete"><a href="#">Gabinete</a></li>
+            <li class="do-seu-jeito-alimentação"><a href="#">Alimentação</a></li>
+            <li class="do-seu-jeito-perifericos"><a href="#">Periféricos</a></li>
+            <li class="do-seu-jeito-revisao"><a href="#">Revisão</a></li>
           </ul>
         </div>
     </div>
-    <div class="titles-countainer">
-        <div class="items-information">
-            <h2 class="product-name">Nome do produto</h2>
-            <h2 class="product-value">Valor</h2>
-            <h2 class="product-amount">Quantidade</h2>
+
+    <div class="do-seu-jeito-titles-countainer">
+        <div class="do-seu-jeito-items-information">
+            <h2 class="do-seu-jeito-product-name">Nome do produto</h2>
+            <h2 class="do-seu-jeito-product-value">Valor</h2>
+            <h2 class="do-seu-jeito-product-amount">Quantidade</h2>
         </div>
     </div>
-    <div class="countainer-products">
-        <div class="product" id="product-1">
-            <img src="public/assets/img/imagem-produto-removebg-preview.png" alt="processador" class="img-product" id="img-product">
-            <p class="name" id="name">Processador AMD Ryzen 3</p>
-            <p class="value" id="value">R$ 458,99</p>
-            <img src="public/assets/img/Arrow copy.png" alt="arrow" id="left-arrow">
-            <div class="amount-square" id="amount-square"><p class="amount">-</p></div>
-            <img src="public/assets/img/Arrow.png" alt="right-arrow" id="right-arrow">
-            <div class="product-bottom">
-                <div class="sub-bottom">
-                    <img src="public/assets/img/Arrow - Right 3.png" alt="arrow" id="bottom-arrow">
+
+    <div class="do-seu-jeito-countainer-products">
+        <div class="do-seu-jeito-product" id="do-seu-jeito-product-1">
+            <img src="public/assets/img/imagem-produto-removebg-preview.png" alt="processador" class="do-seu-jeito-img-product" id="do-seu-jeito-img-product">
+            <p class="do-seu-jeito-name" id="do-seu-jeito-name">Processador AMD Ryzen 3</p>
+            <p class="do-seu-jeito-value" id="do-seu-jeito-value">R$ 458,99</p>
+            <img src="public/assets/img/Arrow copy.png" alt="arrow" id="do-seu-jeito-left-arrow">
+            <div class="do-seu-jeito-amount-square" id="do-seu-jeito-amount-square"><p class="do-seu-jeito-amount">-</p></div>
+            <img src="public/assets/img/Arrow.png" alt="right-arrow" id="do-seu-jeito-right-arrow">
+            <div class="do-seu-jeito-product-bottom">
+                <div class="do-seu-jeito-sub-bottom">
+                    <img src="public/assets/img/Arrow - Right 3.png" alt="arrow" id="do-seu-jeito-bottom-arrow">
                 </div>
             </div>
         </div>
 
-        <div class="product" id="product-2">
-            <img src="public/assets/img/imagem-produto-removebg-preview.png" alt="processador" class="img-product" id="img-product">
-            <p class="name" id="name">Processador AMD Ryzen 3</p>
-            <p class="value" id="value">R$ 458,99</p>
-            <img src="public/assets/img/Arrow copy.png" alt="arrow" id="left-arrow">
-            <div class="amount-square" id="amount-square"><p class="amount">-</p></div>
-            <img src="public/assets/img/Arrow.png" alt="right-arrow" id="right-arrow">
-            <div class="product-bottom">
-                <div class="sub-bottom">
-                    <img src="public/assets/img/Arrow - Right 3.png" alt="arrow" id="bottom-arrow">
+        <div class="do-seu-jeito-product" id="do-seu-jeito-product-2">
+            <img src="public/assets/img/processador2-removebg-preview.png" alt="processador" class="do-seu-jeito-img-product" id="do-seu-jeito-img-product">
+            <p class="do-seu-jeito-name" id="do-seu-jeito-name">Processador AMD Ryzen 3</p>
+            <p class="do-seu-jeito-value" id="do-seu-jeito-value">R$ 679,99</p>
+            <img src="public/assets/img/Arrow copy.png" alt="arrow" id="do-seu-jeito-left-arrow">
+            <div class="do-seu-jeito-amount-square" id="do-seu-jeito-amount-square"><p class="do-seu-jeito-amount">-</p></div>
+            <img src="public/assets/img/Arrow.png" alt="right-arrow" id="do-seu-jeito-right-arrow">
+            <div class="do-seu-jeito-product-bottom">
+                <div class="do-seu-jeito-sub-bottom">
+                    <img src="public/assets/img/Arrow - Right 3.png" alt="arrow" id="do-seu-jeito-bottom-arrow">
                 </div>
             </div>
         </div>
 
-         <div class="product" id="product-3">
-            <img src="public/assets/img/imagem-produto-removebg-preview.png" alt="processador" class="img-product" id="img-product">
-            <p class="name" id="name">Processador AMD Ryzen 3</p>
-            <p class="value" id="value">R$ 458,99</p>
-            <img src="public/assets/img/Arrow copy.png" alt="arrow" id="left-arrow">
-            <div class="amount-square" id="amount-square"><p class="amount">-</p></div>
-            <img src="public/assets/img/Arrow.png" alt="right-arrow" id="right-arrow">
-            <div class="product-bottom">
-                <div class="sub-bottom">
-                    <img src="public/assets/img/Arrow - Right 3.png" alt="arrow" id="bottom-arrow">
+        <div class="do-seu-jeito-product" id="do-seu-jeito-product-3">
+            <img src="public/assets/img/processador3-removebg-preview.png" alt="processador" class="do-seu-jeito-img-product" id="do-seu-jeito-img-product">
+            <p class="do-seu-jeito-name" id="do-seu-jeito-name">Processador AMD Ryzen 3</p>
+            <p class="do-seu-jeito-value" id="do-seu-jeito-value">R$1.198,99</p>
+            <img src="public/assets/img/Arrow copy.png" alt="arrow" id="do-seu-jeito-left-arrow">
+            <div class="do-seu-jeito-amount-square" id="do-seu-jeito-amount-square"><p class="do-seu-jeito-amount">-</p></div>
+            <img src="public/assets/img/Arrow.png" alt="right-arrow" id="do-seu-jeito-right-arrow">
+            <div class="do-seu-jeito-product-bottom">
+                <div class="do-seu-jeito-sub-bottom">
+                    <img src="public/assets/img/Arrow - Right 3.png" alt="arrow" id="do-seu-jeito-bottom-arrow">
                 </div>
             </div>
         </div>
 
-        <div class="product" id="product-4">
-            <img src="public/assets/img/imagem-produto-removebg-preview.png" alt="processador" class="img-product" id="img-product">
-            <p class="name" id="name">Processador AMD Ryzen 3</p>
-            <p class="value" id="value">R$ 458,99</p>
-            <img src="public/assets/img/Arrow copy.png" alt="arrow" id="left-arrow">
-            <div class="amount-square" id="amount-square"><p class="amount">-</p></div>
-            <img src="public/assets/img/Arrow.png" alt="right-arrow" id="right-arrow">
-            <div class="product-bottom">
-                <div class="sub-bottom">
-                    <img src="public/assets/img/Arrow - Right 3.png" alt="arrow" id="bottom-arrow">
+        <div class="do-seu-jeito-product" id="do-seu-jeito-product-4">
+            <img src="public/assets/img/processador4-removebg-preview.png" alt="processador" class="do-seu-jeito-img-product" id="do-seu-jeito-img-product">
+            <p class="do-seu-jeito-name" id="do-seu-jeito-name">Processador AMD Ryzen 3</p>
+            <p class="do-seu-jeito-value" id="do-seu-jeito-value">R$2.449,89</p>
+            <img src="public/assets/img/Arrow copy.png" alt="arrow" id="do-seu-jeito-left-arrow">
+            <div class="do-seu-jeito-amount-square" id="do-seu-jeito-amount-square"><p class="do-seu-jeito-amount">-</p></div>
+            <img src="public/assets/img/Arrow.png" alt="right-arrow" id="do-seu-jeito-right-arrow">
+            <div class="do-seu-jeito-product-bottom">
+                <div class="do-seu-jeito-sub-bottom">
+                    <img src="public/assets/img/Arrow - Right 3.png" alt="arrow" id="do-seu-jeito-bottom-arrow">
                 </div>
             </div>
         </div>
 
-        <div class="product" id="product-5">
-            <img src="public/assets/img/imagem-produto-removebg-preview.png" alt="processador" class="img-product" id="img-product">
-            <p class="name" id="name">Processador AMD Ryzen 3</p>
-            <p class="value" id="value">R$ 458,99</p>
-            <img src="public/assets/img/Arrow copy.png" alt="arrow" id="left-arrow">
-            <div class="amount-square" id="amount-square"><p class="amount">-</p></div>
-            <img src="public/assets/img/Arrow.png" alt="right-arrow" id="right-arrow">
-            <div class="product-bottom">
-                <div class="sub-bottom">
-                    <img src="public/assets/img/Arrow - Right 3.png" alt="arrow" id="bottom-arrow">
+        <div class="do-seu-jeito-product" id="do-seu-jeito-product-5">
+            <img src="public/assets/img/processador5-removebg-preview.png" alt="processador" class="do-seu-jeito-img-product" id="do-seu-jeito-img-product">
+            <p class="do-seu-jeito-name" id="do-seu-jeito-name">Processador AMD Ryzen 3</p>
+            <p class="do-seu-jeito-value" id="do-seu-jeito-value">R$399,99</p>
+            <img src="public/assets/img/Arrow copy.png" alt="arrow" id="do-seu-jeito-left-arrow">
+            <div class="do-seu-jeito-amount-square" id="do-seu-jeito-amount-square"><p class="do-seu-jeito-amount">-</p></div>
+            <img src="public/assets/img/Arrow.png" alt="right-arrow" id="do-seu-jeito-right-arrow">
+            <div class="do-seu-jeito-product-bottom">
+                <div class="do-seu-jeito-sub-bottom">
+                    <img src="public/assets/img/Arrow - Right 3.png" alt="arrow" id="do-seu-jeito-bottom-arrow">
                 </div>
             </div>
         </div>
 
-        <div class="product" id="product-6">
-            <img src="public/assets/img/imagem-produto-removebg-preview.png" alt="processador" class="img-product" id="img-product">
-            <p class="name" id="name">Processador AMD Ryzen 3</p>
-            <p class="value" id="value">R$ 458,99</p>
-            <img src="public/assets/img/Arrow copy.png" alt="arrow" id="left-arrow">
-            <div class="amount-square" id="amount-square"><p class="amount">-</p></div>
-            <img src="public/assets/img/Arrow.png" alt="right-arrow" id="right-arrow">
-            <div class="product-bottom">
-                <div class="sub-bottom">
-                    <img src="public/assets/img/Arrow - Right 3.png" alt="arrow" id="bottom-arrow">
+        <div class="do-seu-jeito-product" id="do-seu-jeito-product-6">
+            <img src="public/assets/img/processador6-removebg-preview.png" alt="processador" class="do-seu-jeito-img-product" id="do-seu-jeito-img-product">
+            <p class="do-seu-jeito-name" id="do-seu-jeito-name">Processador AMD Ryzen 3</p>
+            <p class="do-seu-jeito-value" id="do-seu-jeito-value">R$699,99</p>
+            <img src="public/assets/img/Arrow copy.png" alt="arrow" id="do-seu-jeito-left-arrow">
+            <div class="do-seu-jeito-amount-square" id="do-seu-jeito-amount-square"><p class="do-seu-jeito-amount">-</p></div>
+            <img src="public/assets/img/Arrow.png" alt="right-arrow" id="do-seu-jeito-right-arrow">
+            <div class="do-seu-jeito-product-bottom">
+                <div class="do-seu-jeito-sub-bottom">
+                    <img src="public/assets/img/Arrow - Right 3.png" alt="arrow" id="do-seu-jeito-bottom-arrow">
                 </div>
             </div>
         </div>
 
-        <div class="product" id="product-7">
-            <img src="public/assets/img/imagem-produto-removebg-preview.png" alt="processador" class="img-product" id="img-product">
-            <p class="name" id="name">Processador AMD Ryzen 3</p>
-            <p class="value" id="value">R$ 458,99</p>
-            <img src="public/assets/img/Arrow copy.png" alt="arrow" id="left-arrow">
-            <div class="amount-square" id="amount-square"><p class="amount">-</p></div>
-            <img src="public/assets/img/Arrow.png" alt="right-arrow" id="right-arrow">
-            <div class="product-bottom">
-                <div class="sub-bottom">
-                    <img src="public/assets/img/Arrow - Right 3.png" alt="arrow" id="bottom-arrow">
+        <div class="do-seu-jeito-product" id="do-seu-jeito-product-7">
+            <img src="public/assets/img/processador7-removebg-preview.png" alt="processador" class="do-seu-jeito-img-product" id="do-seu-jeito-img-product">
+            <p class="do-seu-jeito-name" id="do-seu-jeito-name">Processador AMD Ryzen 3</p>
+            <p class="do-seu-jeito-value" id="do-seu-jeito-value">R$2.109,99</p>
+            <img src="public/assets/img/Arrow copy.png" alt="arrow" id="do-seu-jeito-left-arrow">
+            <div class="do-seu-jeito-amount-square" id="do-seu-jeito-amount-square"><p class="do-seu-jeito-amount">-</p></div>
+            <img src="public/assets/img/Arrow.png" alt="right-arrow" id="do-seu-jeito-right-arrow">
+            <div class="do-seu-jeito-product-bottom">
+                <div class="do-seu-jeito-sub-bottom">
+                    <img src="public/assets/img/Arrow - Right 3.png" alt="arrow" id="do-seu-jeito-bottom-arrow">
                 </div>
             </div>
         </div>
 
-        <div class="product" id="product-8">
-            <img src="public/assets/img/imagem-produto-removebg-preview.png" alt="processador" class="img-product" id="img-product">
-            <p class="name" id="name">Processador AMD Ryzen 3</p>
-            <p class="value" id="value">R$ 458,99</p>
-            <img src="public/assets/img/Arrow copy.png" alt="arrow" id="left-arrow">
-            <div class="amount-square" id="amount-square"><p class="amount">-</p></div>
-            <img src="public/assets/img/Arrow.png" alt="right-arrow" id="right-arrow">
-            <div class="product-bottom">
-                <div class="sub-bottom">
-                    <img src="public/assets/img/Arrow - Right 3.png" alt="arrow" id="bottom-arrow">
+        <div class="do-seu-jeito-product" id="do-seu-jeito-product-8">
+            <img src="public/assets/img/processador8-removebg-preview.png" alt="processador" class="do-seu-jeito-img-product" id="do-seu-jeito-img-product">
+            <p class="do-seu-jeito-name" id="do-seu-jeito-name">Processador AMD Ryzen 3</p>
+            <p class="do-seu-jeito-value" id="do-seu-jeito-value">R$3.449,99</p>
+            <img src="public/assets/img/Arrow copy.png" alt="arrow" id="do-seu-jeito-left-arrow">
+            <div class="do-seu-jeito-amount-square" id="do-seu-jeito-amount-square"><p class="do-seu-jeito-amount">-</p></div>
+            <img src="public/assets/img/Arrow.png" alt="right-arrow" id="do-seu-jeito-right-arrow">
+            <div class="do-seu-jeito-product-bottom">
+                <div class="do-seu-jeito-sub-bottom">
+                    <img src="public/assets/img/Arrow - Right 3.png" alt="arrow" id="do-seu-jeito-bottom-arrow">
                 </div>
             </div>
         </div>
     </div>
-    <div class="pagination-countainer">
-        <img src="public/assets/img/Arrow copy.png" alt="arrow" id="left-arrow-pagination">
-        <div class="page-cube">
-            <p class="page-number" id="numero-pagina">1</p>
+    <div class="do-seu-jeito-pagination-countainer">
+        <img src="public/assets/img/Arrow copy.png" alt="arrow" id="do-seu-jeito-left-arrow-pagination">
+        <div class="do-seu-jeito-page-cube">
+            <p class="do-seu-jeito-page-number" id="do-seu-jeito-numero-pagina">1</p>
         </div>
-        <img src="public/assets/img/Arrow.png" alt="right-arrow" id="right-arrow-pagination">
+        <img src="public/assets/img/Arrow.png" alt="right-arrow" id="do-seu-jeito-right-arrow-pagination">
     </div>
 
-    <div class="continue-button-countainer">
-        <button class="continue-button">
-            <p class="text-continue-button"><a href="#">AVANÇAR</a></p>
+    <div class="do-seu-jeito-continue-button-countainer">
+        <button class="do-seu-jeito-continue-button">
+            <p class="do-seu-jeito-text-continue-button"><a href="#">AVANÇAR</a></p>
         </button>
     </div>
-
-
-
-
-
-
-
-
-
-
-
-    <footer>
-        <div id="footer_content">
-            <div id="footer_contacts">
-                <img src="public/assets/img/logo.png" alt="Logo Tweeb" class="footer-logo">
-                <p class="footer-tagline">Sua conexão com o futuro, garantimos hoje.</p>
-                <div id="footer_social_midia">
-                    <a href="#"><i class="fa-brands fa-twitter"></i></a>
-                    <a href="#"><i class="fa-brands fa-facebook"></i></a>
-                    <a href="#"><i class="fa-brands fa-tiktok"></i></a>
-                    <a href="#"><i class="fa-brands fa-instagram"></i></a>  
-                </div>
-            </div>
-
-            <div class="espaco">
-                <ul class="footer_list">
-                    <li><h3>Contatos</h3></li>
-                    <li><a href="#" class="footer_link cursorevento">tweeb@comercial.com</a></li>
-                    <li><a href="#" class="footer_link cursorevento">(67) 1234-5678</a></li>
-                </ul>
-    
-                <ul class="footer_list">
-                    <li><h3>Institucional</h3></li>
-                    <li><a href="#" class="footer_link">Quem somos</a></li>
-                    <li><a href="#" class="footer_link">Localização</a></li>
-                    <li><a href="#" class="footer_link">Políticas do site</a></li>
-                </ul>
-    
-                <div class="footer_container">
-                    <ul class="footer_list">
-                        <li><h3>Departamentos</h3></li>
-                        <li><a href="#" class="footer_link">Computadores</a></li>
-                        <li><a href="#" class="footer_link">Hardwares</a></li>
-                        <li><a href="#" class="footer_link">Periféricos</a></li>
-                    </ul>
-                
-                    <ul class="footer_list direita">
-                        <li class="list_title"><h3></h3></li>
-                        <li><a href="#" class="footer_link">Energia</a></li>
-                        <li><a href="#" class="footer_link">Áudio</a></li>
-                        <li><a href="#" class="footer_link">Games</a></li>
-                    </ul>
-                </div>
-            </div>
-        
-            
-            </div>
-        </div>
-
-
-
-
-
-        <div class="mobile-view">
-            <div class="contatos">
-                <img src="public/assets/img/logo.png" alt="logo tweeb" class="footer-logo">
-                <p class="footer-tagline">Sua conexão com o futuro, garantimos hoje.</p>
-                <div id="footer_social_midia">
-                    <a href="#"><i class="fa-brands fa-twitter"></i></a>
-                    <a href="#"><i class="fa-brands fa-facebook"></i></a>
-                    <a href="#"><i class="fa-brands fa-tiktok"></i></a>
-                    <a href="#"><i class="fa-brands fa-instagram"></i></a>  
-                </div>
-            </div>
-            
-            <div class="mobile_direita">
-                <ul class="footer_list">
-                    <li><h3>Contatos</h3></li>
-                    <li><a href="#" class="footer_link cursorevento">tweeb@comercial.com</a></li>
-                    <li><a href="#" class="footer_link cursorevento">(67) 1234-5678</a></li>
-                </ul>
-                <ul class="footer_list">
-                    <li><h3>Institucional</h3></li>
-                    <li><a href="#" class="footer_link">Quem somos</a></li>
-                    <li><a href="#" class="footer_link">Localização</a></li>
-                    <li><a href="#" class="footer_link">Políticas do site</a></li>
-                </ul>
-            </div>
-        </div>
-    </footer> -->
 </body>
 </html>

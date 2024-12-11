@@ -1,3 +1,5 @@
+/*NAV BAR*/
+
 @import url('https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
 @import url('https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap');
 
@@ -9,12 +11,11 @@
 
 body {
     background-color: rgb(255, 255, 255);
-    height: 100%;
 }
 
 header {
     width: 100%;/*faz o cabeçalho ocupar toda a largura da pag*/
-    height: 100px   ;/*define a altura do cabeçalho*/
+    height: 100px;/*define a altura do cabeçalho*/
     display: flex;
     align-items: center;
     position: relative;
@@ -141,11 +142,6 @@ nav ul li a i {
 }
 
 
-.department:hover {
-    color: rgb(219, 218, 218);
-}
-
-
 .department img {
     width: 20px;  
     height: 20px;
@@ -190,6 +186,9 @@ nav ul li a i {
     overflow-y: auto;   
 }
 
+.submenu.open {
+    display: block;   /* O submenu principal aparece quando a classe 'open' é adicionada */
+}
 
 .department.open .submenu {
     opacity: 1;
@@ -210,67 +209,111 @@ nav ul li a i {
     color: #ffffff;  
     font-size: 14px; 
     font-weight: 500;
+    align-items: center;
     display: block;
     padding: 8px;
     border-radius: 5px;
     transition: background-color 0.3s ease;
 }
 
-
+.submenu i {
+    margin-left: auto; /* Coloca a seta à direita */
+    transition: transform 0.3s ease; /* Transição suave para a rotação */
+}
 .submenu a:hover {
     background-color: #ffffff22;
 }
 
 
+/* Submenu secundário oculto inicialmente */
 .submenu-sub {
-    padding-left: 20px; 
-    display: block;
+    display: none;               /* Alinha os itens em uma linha */
+    gap: 10px;                    /* Espaçamento entre os itens */
+    padding-left: 20px;
     width: 100%;
+    flex-wrap: wrap;   
 }
 
 .submenu-sub li {
     list-style-type: none;
     padding: 8px 15px;
-    width: 100%; 
+    width: auto;                  /* A largura dos itens será ajustada automaticamente */
     box-sizing: border-box;
-    display: inline;
+    display: inline-block;        /* Faz os itens se comportarem como elementos em linha */
 }
 
 .submenu-sub a {
     text-decoration: none;
-    color: #ffffff;  
-    font-size: 14px;  
+    color: #ffffff;
+    font-size: 14px;
     font-weight: 400;
     padding: 6px 12px;
     border-radius: 5px;
-    display: inline;
+    display: block;
     transition: background-color 0.3s ease;
 }
-
 
 .submenu-sub a:hover {
     background-color: #ffffff22;
 }
 
+.submenu-sub.open {
+    display: flex;   /* Exibe os submenus de tipos quando a classe 'open' é adicionada */
+}
+/* Esconde o submenu do usuário inicialmente */
+.user-submenu {
+    display: none;
+    position: absolute;
+    background-color: #f5f5f5;
+    margin-left: 40px;
+    padding: 2px 0; /* Diminui o padding para tornar o background mais estreito */
+    border-radius: 5px;
+    z-index: 999;
+    box-shadow: rgba(0, 0, 0, 0.1) 0px 10px 15px -3px, rgba(0, 0, 0, 0.05) 0px 4px 6px -2px;
+    width: 100px; /* Diminui a largura do submenu */
+    height: 105px;
+}
 
-.department.open .submenu-sub {
+/* Ajusta o estilo das opções dentro do submenu */
+.user-submenu li {
+    list-style-type: none;
+    padding: 6px 10px; /* Diminui o padding das opções para diminuir o background */
+}
+
+/* Ajusta o estilo dos links dentro do submenu */
+.user-submenu a {
+    text-decoration: none;
+    color: #333;
+    font-size: 14px;
+    font-weight: 400;
     display: block;
-    margin-left: 20px; 
-    width: 100%;
+    padding: 2px 8px; /* Diminui o padding dos links */
+    border-radius: 5px;
+    transition: background-color 0.3s ease;
+}
+
+/* Altera a cor do link quando o mouse passa por cima */
+.user-submenu a:hover {
+    color: #FE8C67;
+    background-color: #e0e0e0;
 }
 
 
-.submenu {
-    max-height: 300px;  
-    overflow-y: auto;  
-}
+/* FIM NAV BAR*/
 
-.banner1{
+
+
+
+
+
+
+
+.do-seu-jeito-banner1{
     width: 100%;
     margin-top: 5%;
 }
 
-.countainer-components{
+.do-seu-jeito-countainer-components{
     width: 100%;
     height: 100%;
     display: flex;
@@ -278,8 +321,7 @@ nav ul li a i {
     align-items: center;
 }
 
-
-.components{
+.do-seu-jeito-components{
     display: flex;
     align-items: center;
     justify-content: center;
@@ -291,7 +333,7 @@ nav ul li a i {
     border-radius: 7px;
 }
 
-.ul-components{
+.do-seu-jeito-ul-components{
     display: flex;
     flex-direction: row;
     list-style-type: none;
@@ -299,14 +341,14 @@ nav ul li a i {
     align-items: center;
 }
 
-.ul-components a{
+.do-seu-jeito-ul-components a{
     text-decoration: none;
     color: #c3c3c3;
     font-family: "Montserrat", sans-serif;
     font-size: 16px;
 }
 
-.processador{
+.do-seu-jeito-processador{
     color: black;
     width: 127px;
     height: 33px;
@@ -317,43 +359,43 @@ nav ul li a i {
     border-radius: 7px;
 }
 
-.processador a{
+.do-seu-jeito-processador a{
     color: black;
 }
 
-.titles-countainer{
+.do-seu-jeito-titles-countainer{
     width: 100%;
     height: 100%;
     display: flex;
     justify-content: center;
 }
 
-.items-information{
+.do-seu-jeito-items-information{
     display: flex;
     align-items: center;
     margin-top: 1%;
     font-family: "Poppins", sans-serif;
 }
 
-.product-name{
+.do-seu-jeito-product-name{
     transform: translateX(-29vw);
     font-size: 16px;
     font-weight: 400;
 }
 
-.product-value{
+.do-seu-jeito-product-value{
     transform: translateX(-2vw);
     font-size: 16px;
     font-weight: 400;
 }
 
-.product-amount{
+.do-seu-jeito-product-amount{
     transform: translateX(16vw);
     font-size: 16px;
     font-weight: 400;
 }
 
-.countainer-products{
+.do-seu-jeito-countainer-products{
     display: flex;
     flex-direction: column;
     justify-content: center;
@@ -364,7 +406,7 @@ nav ul li a i {
     margin-top: 2vh;
 }
 
-.product{
+.do-seu-jeito-product{
     display: flex;
     flex-direction: row;
     align-items: center;
@@ -374,7 +416,7 @@ nav ul li a i {
     background-color: #f5f5f5;
 }
 
-.amount-square{
+.do-seu-jeito-amount-square{
     width: 39px;
     height: 32px;
     display: flex;
@@ -385,34 +427,34 @@ nav ul li a i {
     transform: translateX(12vw);
 }
 
-.name{
+.do-seu-jeito-name{
     transform: translateX(-21vw);
     font-family: "Poppins", sans-serif;
 }
 
-.img-product{
+.do-seu-jeito-img-product{
     transform: translateX(-22vw);
 }
 
-.value{
+.do-seu-jeito-value{
     transform: translateX(-5vw);
     font-size: 16px;
     font-family: "Poppins", sans-serif; 
 }
 
-.amount{
+.do-seu-jeito-amount{
     font-family: "Montserrat", sans-serif;
 }
 
-#right-arrow{
+#do-seu-jeito-right-arrow{
     transform: translateX(15vw);
 }
 
-#left-arrow{
+#do-seu-jeito-left-arrow{
     transform: translateX(9vw);
 }
 
-.product-bottom{
+.do-seu-jeito-product-bottom{
     width: 35px;
     height: 35px;
     background-color: white;
@@ -424,7 +466,7 @@ nav ul li a i {
     justify-content: center;
 }
 
-.sub-bottom{
+.do-seu-jeito-sub-bottom{
     width: 17px;
     height: 17px;
     background-color: #f5f5f5;
@@ -435,7 +477,7 @@ nav ul li a i {
     justify-content: center;    
 }
 
-.continue-button-countainer{
+.do-seu-jeito-continue-button-countainer{
     width: 100%;
     height: 100%;
     display: flex;
@@ -443,7 +485,7 @@ nav ul li a i {
     align-items: center;
 }
 
-.continue-button{
+.do-seu-jeito-continue-button{
     width: 248px;
     height: 64px;
     background-color:#291E40;
@@ -454,24 +496,24 @@ nav ul li a i {
     margin-bottom: 23.9%;
 }
 
-.continue-button a{
+.do-seu-jeito-continue-button a{
     color: white;
     text-decoration: none;
 }
 
-#left-arrow{
+#do-seu-jeito-left-arrow{
     cursor: pointer;
 }
 
-#right-arrow{
+#do-seu-jeito-right-arrow{
     cursor: pointer;
 }
 
-#bottom-arrow{
+#do-seu-jeito-bottom-arrow{
     cursor: pointer;
 }
 
-.pagination-countainer{
+.do-seu-jeito-pagination-countainer{
     height: 100%;
     width: 100%;
     display: flex;
@@ -482,7 +524,7 @@ nav ul li a i {
     margin-top: 48px;
 }
 
-.page-cube{
+.do-seu-jeito-page-cube{
     width: 30px;
     height: 32px;
     border-radius: 5px;
@@ -492,213 +534,6 @@ nav ul li a i {
     justify-content: center;
 }
 
-.page-number{
+.do-seu-jeito-page-number{
     color: white;
 }
-
-
-
-
-
-
-
-
-
-
-
-
-
-
- @import url('https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&display=swap');
-
-@import url('https://fonts.googleapis.com/css2?family=Arimo:ital,wght@0,400..700;1,400..700&display=swap');
-
-
-:root {
-    --color-neutral-1: #ffffff;
-    --color-neutral-10: #291E40;
-    --color-primary: #3C64B1;
-}
-
-* {
-    font-family: 'Inter', sans-serif;
-    margin: 0;
-    padding: 0;
-    box-sizing: border-box;
-}
-
-html, body {
-    height: 100%;
-    margin: 0;
-    padding: 0;
-}
-
-body {
-    display: flex;
-    flex-direction: column;
-    min-height: 100vh;
-}
-
-footer {
-    background-color: #2E2046; 
-    color: var(--color-neutral-1);
-    padding: 2rem 1rem;
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    flex-direction: row;
-    width: 100%;
-    height: 250px;
-}
-
-#footer_content {
-    display: flex;
-    justify-content: space-between;
-    align-items: flex-start;
-    width: 100%;
-    max-width: 1200px;
-    margin: 0 auto;
-    flex-wrap: wrap;
-}
-
-.footer-tagline{
-    font-family: 'Arimo', sans-serif;
-}
-.direita{
-    position: relative;
-    top: 22px;
-}
-.footer_container {
-    display: flex;
-    justify-content: space-between; 
-}
-
-.espaco{
-    display: flex;
-    flex-direction: row;
-    justify-content: space-between;
-    gap: 75px;
-    position: relative;
-    right: 100px;
-}
-
-#footer_contacts {
-    flex: 1;
-    max-width: 300px;
-}
-
-.footer-logo {
-    max-width: 150px;
-    margin-bottom: 1rem;
-}
-
-.footer-tagline {
-    font-size: 1rem;
-    font-style: italic;
-    margin-bottom: 1rem;
-    color: #bbb; 
-}
-
-#footer_social_midia {
-    position: relative;
-    top: 30px;
-    right: 65px;
-    display: flex;
-    justify-content: center;
-    gap: 1.5rem;
-    margin-top: 1rem;
-}
-
-#footer_social_midia a {
-    color: var(--color-neutral-1);
-    font-size: 1.2rem; 
-}
-
-.Contatos{
-    display: flex;
-    gap: 22px;
-}
-
-.footer_list {
-    list-style: none;
-    margin: 0;
-    padding: 0;
-    flex: 1;
-    text-align: left;
-}
-
-.footer_list h3 {
-    margin-bottom: 24px;
-    font-size: 1.2rem;
-    color: var(--color-neutral-1);
-}
-
-.footer_list a {
-    text-decoration: none;
-    color: var(--color-neutral-1);
-    margin-bottom: 24px;
-    display: block;
-    font-size: 0.9rem;
-}
-
-.footer_list a:hover {
-    color: var(--color-primary);
-    transition: color 0.1s ease;
-}
-
-footer p, footer h3 {
-    font-size: 1rem;
-}
-
-footer {
-    margin-top: auto;
-}
-.cursorevento{
-    pointer-events: none;
-}
-
-
-
-
-.mobile-view{
-    display: none;
-    width: 100%;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
-}
-
-.mobile_direita{
-    display: flex;
-    flex-direction: row;
-    gap: 50px;
-}
-
-@media only screen and (max-width: 600px) {
-    #footer_content{
-        display: none;
-    }
-    .contatos{
-        align-items: center;
-        display: flex;
-        flex-direction: column;
-    }
-    .mobile-view{
-        display: flex;
-    }
-    footer{
-        height: 400px;
-    }
-    .footer_list{
-        height: 100%;
-    }
-    footer li{
-        text-align: center;
-    }
-    #footer_social_midia{
-        top: 0;
-        right: 0;
-        margin-bottom: 25px;
-    }
-  }
-  
