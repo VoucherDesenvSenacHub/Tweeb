@@ -1,20 +1,15 @@
-// Seleciona todos os departamentos
 const departments = document.querySelectorAll('.department');
 
-// Para cada departamento, adiciona um evento de clique para abrir/fechar o submenu principal
+// Para cada departamento, adiciona eventos de mouseenter e mouseleave para abrir/fechar o submenu
 departments.forEach(department => {
-    department.addEventListener('click', (event) => {
-        event.stopPropagation();  // Impede que o clique no departamento feche o submenu imediatamente
+    department.addEventListener('mouseenter', () => {
+        // Adiciona a classe 'open' para mostrar o submenu
+        department.classList.add('open');
+    });
 
-        // Alterna a classe 'open' no departamento, controlando a visibilidade do submenu principal
-        department.classList.toggle('open');
-
-        // Fecha todos os outros submenus principais (opcional, dependendo do comportamento desejado)
-        departments.forEach(dep => {
-            if (dep !== department) {
-                dep.classList.remove('open');
-            }
-        });
+    department.addEventListener('mouseleave', () => {
+        // Remove a classe 'open' para ocultar o submenu
+        department.classList.remove('open');
     });
 });
 
