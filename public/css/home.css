@@ -309,7 +309,7 @@ span{
 /* Produtos */
 
 .produtos{
-    height: auto;
+    height: 1550px;
     background-color: white;
     display: flex;
     flex-direction: column;
@@ -384,6 +384,15 @@ span{
 .produtos-card .heart{
     position: absolute; /* sem isso a imagem não vai pro canto. */
     top: 20px;
+    left: 20px;
+    width: 29px;
+    height: 27px;
+    cursor: pointer;
+}
+
+.produtos-card .add-carrinho{
+    position: absolute; /* sem isso a imagem não vai pro canto. */
+    top: 20px;
     right: 20px;
     width: 29px;
     height: 27px;
@@ -403,7 +412,7 @@ span{
 
 .card-botao{
     position: absolute;
-    bottom: 30px;
+    bottom: 20px;
     padding: 10px;
     width: 235px;
     height: 48px;
@@ -436,8 +445,6 @@ span{
 /* segundo carrossel */
 
 .swiper-container{
-    margin-top: 200px;
-    margin-bottom: 230px;
     width: 100%;
     height: auto;
     position: relative;
@@ -489,7 +496,8 @@ span{
 
 .img-anuncio img{
     width: 100%;
-    height: 550px;
+    height: 400px;
+    margin-top: 100px;
 }
 
 /* hover nos cards de categoria */
@@ -536,4 +544,24 @@ span{
     border: none;
     transform: scale(1.1);
     color: var(--azul-intenso);
+}
+
+.card-rate{
+    margin: 10px;
+}
+
+.card-rate i{
+    color: #FFAD33;
+}
+
+.qnt-avaliacoes{
+    font: 14px;
+    color: gray;
+}
+
+#ad-produto{
+    margin-top: 15px;
+    width: 100%;
+    height: auto;
+    object-fit: contain;
 }

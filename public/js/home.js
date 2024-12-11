@@ -42,10 +42,10 @@ let swiper = new Swiper('.swiper-container', {
         },
         // arrumar na responsividade
         600: {
-            slidesPerView: 1,
+            slidesPerView: 2,
             spaceBetween: 20,
             autoHeight: true,
-            direction: 'vertical'
+            // direction: 'vertical'
           },
       }
   });
