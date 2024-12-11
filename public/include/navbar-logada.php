@@ -1,14 +1,4 @@
-<!DOCTYPE html>
-<html lang="pt-br">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Login</title>
-    <link rel="stylesheet" href="public/css/navbar.css">
-    <link href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css' rel='stylesheet'>
-</head>
-<body class="navBody">
-    <header  class="headNav">
+<header  class="headNav">
         <div class="logo">
             <img src="public/assets/img/Ativo 2.png" alt="logo tweeb">
         </div>
@@ -23,7 +13,7 @@
                 <li><a href="#">Home</a></li>
                 <li><a href="#">Sobre</a></li>
                 <li><a href="#">Orçamento</a></li>
-                <li><a href="#">Cadastre-se</a></li>
+                <li><a href="#">Personalize</a></li>
                 <li>
                     <a href="#"><i class='bx bx-cart-alt'></i></a>
                     <!-- <a href="#"><i class='bx bx-user'></i></a> -->
@@ -212,6 +202,3 @@
             </ul>
         </div>
     </section>
-    <script src="public/js/navbar.js"></script>
-</body>
-</html>
