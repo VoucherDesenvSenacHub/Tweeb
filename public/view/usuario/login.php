@@ -1,7 +1,6 @@
 <?php
 
 require '../../../Entity/Usuario.php'; // ALTERE O DIRETORIO CONFORME ESTIVER SALVO NO SEU LOCAL
-include("../../../public/include/navbar.php");
 
 if ($_SERVER['REQUEST_METHOD'] === 'POST') {
     
