@@ -7,12 +7,12 @@
     box-sizing: border-box;
 }
 
-body {
+.navBody{
     background-color: rgb(255, 255, 255);
 }
 
-header {
-    width: 100%;/*faz o cabeçalho ocupar toda a largura da pag*/
+.headNav {
+    width: 100%;/*f az o cabeçalho ocupar toda a largura da pag*/
     height: 100px;/*define a altura do cabeçalho*/
     display: flex;
     align-items: center;
@@ -24,7 +24,7 @@ header {
     padding: 0 20px;
 }
 
-header .logo {
+.headNav .logo {
     margin-right: 20px;
     display: flex;
     align-items: center;
@@ -34,7 +34,7 @@ header .logo {
     height: auto;
 }
 
-header .search-box {
+.headNav .search-box {
     flex: 1;
     position: relative;
 }
@@ -58,7 +58,7 @@ header .search-box {
 }
 
 .search-box button i {
-    font-size: 20px;
+    font-size: 17px;
     color: gray;
 }
 
@@ -79,12 +79,12 @@ header .search-box {
     font-family: 'Montserrat', sans-serif;
 }
 
-header nav {
+.headNav .navb {
     flex: 2; 
     font-family: 'Montserrat', sans-serif;
 }
 
-nav ul {
+.navb ul {
     list-style: none; 
     display: flex;
     justify-content: flex-end; 
@@ -92,12 +92,16 @@ nav ul {
     margin-right: 100px; 
 }
 
-nav ul li {
+.navb ul li {
     position: relative;
     margin-top: 11px;
+    flex-direction: row;
+    display: flex;
+    justify-content: center;
+    align-items: center;
 }
 
-nav ul li a {
+.navb ul li a {
     text-decoration: none; 
     color: rgb(107, 104, 104); 
     font-weight: 500; 
@@ -106,11 +110,11 @@ nav ul li a {
     transition: color 0.3s; 
 }
 
-nav ul li a:hover {
+.navb ul li a:hover {
    color: #40331e; 
 }
 
-nav ul li a i {
+.navb ul li a i {
     font-size: 18px;
     
 }
@@ -140,11 +144,6 @@ nav ul li a i {
 }
 
 
-.department:hover {
-    color: rgb(219, 218, 218);
-}
-
-
 .department img {
     width: 20px;  
     height: 20px;
@@ -171,7 +170,7 @@ nav ul li a i {
 
 .submenu {
     position: fixed;  
-    top: 143px;        
+    top: 142px;        
     left: 0;           
     width: 100vw;      
     background-color: #291E40; 
@@ -180,15 +179,16 @@ nav ul li a i {
     visibility: hidden; 
     transition: opacity 0.3s ease, visibility 0.3s ease;
     z-index: 9999;      
-    border: 3px solid transparent;
     background-clip: padding-box;
-    border-image: linear-gradient(45deg,#CEF5A4, #D4E3FF, #FE8C67);
     border-image-slice: 1;
     box-shadow: rgba(0, 0, 0, 0.1) 0px 10px 15px -3px, rgba(0, 0, 0, 0.05) 0px 4px 6px -2px;
     max-height: 300px;  
     overflow-y: auto;   
 }
 
+.submenu.open {
+    display: block;   /* O submenu principal aparece quando a classe 'open' é adicionada */
+}
 
 .department.open .submenu {
     opacity: 1;
@@ -209,58 +209,111 @@ nav ul li a i {
     color: #ffffff;  
     font-size: 14px; 
     font-weight: 500;
+    align-items: center;
     display: block;
     padding: 8px;
     border-radius: 5px;
     transition: background-color 0.3s ease;
 }
 
-
+.submenu i {
+    margin-left: auto; /* Coloca a seta à direita */
+    transition: transform 0.3s ease; /* Transição suave para a rotação */
+}
 .submenu a:hover {
     background-color: #ffffff22;
 }
 
 
+/* Submenu secundário oculto inicialmente */
 .submenu-sub {
-    padding-left: 20px; 
-    display: block;
+    display: none;               /* Alinha os itens em uma linha */
+    gap: 10px;                    /* Espaçamento entre os itens */
+    padding-left: 20px;
     width: 100%;
+    flex-wrap: wrap;   
 }
 
 .submenu-sub li {
     list-style-type: none;
     padding: 8px 15px;
-    width: 100%; 
+    width: auto;                  /* A largura dos itens será ajustada automaticamente */
     box-sizing: border-box;
-    display: inline;
+    display: inline-block;        /* Faz os itens se comportarem como elementos em linha */
 }
 
 .submenu-sub a {
     text-decoration: none;
-    color: #ffffff;  
-    font-size: 14px;  
+    color: #ffffff;
+    font-size: 14px;
     font-weight: 400;
     padding: 6px 12px;
     border-radius: 5px;
-    display: inline;
+    display: block;
     transition: background-color 0.3s ease;
 }
-
 
 .submenu-sub a:hover {
     background-color: #ffffff22;
 }
 
+.submenu-sub.open {
+    display: flex;   /* Exibe os submenus de tipos quando a classe 'open' é adicionada */
+}
+/* Esconde o submenu do usuário inicialmente */
+.user-submenu {
+    display: none;
+    position: absolute;
+    background-color: #f5f5f5;
+    margin-left: 40px;
+    padding: 2px 0; /* Diminui o padding para tornar o background mais estreito */
+    border-radius: 5px;
+    z-index: 999;
+    box-shadow: rgba(0, 0, 0, 0.1) 0px 10px 15px -3px, rgba(0, 0, 0, 0.05) 0px 4px 6px -2px;
+    width: 100px; /* Diminui a largura do submenu */
+    height: 105px;
+}
 
-.department.open .submenu-sub {
+/* Ajusta o estilo das opções dentro do submenu */
+.user-submenu li {
+    list-style-type: none;
+    padding: 6px 10px; /* Diminui o padding das opções para diminuir o background */
+}
+
+/* Ajusta o estilo dos links dentro do submenu */
+.user-submenu a {
+    text-decoration: none;
+    color: #333;
+    font-size: 14px;
+    font-weight: 400;
     display: block;
-    margin-left: 20px; 
+    padding: 2px 8px; /* Diminui o padding dos links */
+    border-radius: 5px;
+    transition: background-color 0.3s ease;
+}
+
+/* Altera a cor do link quando o mouse passa por cima */
+.user-submenu a:hover {
+    color: #FE8C67;
+    background-color: #e0e0e0;
+}
+.user-icon {
+    background-color: gray;
+    width: 30px;
+    height: 30px;
+    margin-left: 20px;
+    border-radius: 50%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: relative;
+    
+}
+
+.user-icon img {
+    height: 100%;
     width: 100%;
+    /* object-fit: contain;  */
+    display: flex;
+    position: absolute;
 }
-
-
-.submenu {
-    max-height: 300px;  
-    overflow-y: auto;  
-}
-
