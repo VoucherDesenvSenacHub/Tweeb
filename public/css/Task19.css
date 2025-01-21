@@ -364,10 +364,11 @@ nav ul li a i {
 }
 
 .do-seu-jeito-titles-countainer{
-    width: 100%;
+    width: 80%;
     height: 100%;
     display: flex;
     justify-content: center;
+    position: relative;
 }
 
 .do-seu-jeito-items-information{
@@ -375,24 +376,31 @@ nav ul li a i {
     align-items: center;
     margin-top: 1%;
     font-family: "Poppins", sans-serif;
+    width: 100%;
 }
 
 .do-seu-jeito-product-name{
-    transform: translateX(-29vw);
+    /* transform: translateX(-29vw); */
     font-size: 16px;
     font-weight: 400;
+    position: absolute;
+    left: 0;
 }
 
 .do-seu-jeito-product-value{
-    transform: translateX(-2vw);
+    /* transform: translateX(-2vw); */
     font-size: 16px;
     font-weight: 400;
+    position: absolute;
+    left: 48%;
 }
 
 .do-seu-jeito-product-amount{
-    transform: translateX(16vw);
+    /* transform: translateX(16vw); */
     font-size: 16px;
     font-weight: 400;
+    position: absolute;
+    right: 18%;
 }
 
 .do-seu-jeito-countainer-products{
@@ -414,6 +422,7 @@ nav ul li a i {
     width: 80%;
     height: 100px;
     background-color: #f5f5f5;
+    position: relative;
 }
 
 .do-seu-jeito-amount-square{
@@ -424,35 +433,39 @@ nav ul li a i {
     justify-content: center;
     border: 1px solid black;
     border-radius: 5px;
-    transform: translateX(12vw);
+    /* transform: translateX(12vw); */
 }
 
 .do-seu-jeito-name{
-    transform: translateX(-21vw);
+    /* transform: translateX(-21vw); */
     font-family: "Poppins", sans-serif;
+    position: absolute;
+    left: 8vw;
 }
 
 .do-seu-jeito-img-product{
-    transform: translateX(-22vw);
+    /* transform: translateX(-22vw); */
+    position: absolute;
+    left: 20px;
 }
 
 .do-seu-jeito-value{
-    transform: translateX(-5vw);
+    /* transform: translateX(-5vw); */
     font-size: 16px;
     font-family: "Poppins", sans-serif; 
+    position: absolute;
+    left: 46%;
 }
 
 .do-seu-jeito-amount{
     font-family: "Montserrat", sans-serif;
 }
 
-#do-seu-jeito-right-arrow{
-    transform: translateX(15vw);
-}
-
+/* #do-seu-jeito-right-arrow */
+    /* transform: translateX(15vw); */
+/* 
 #do-seu-jeito-left-arrow{
-    transform: translateX(9vw);
-}
+    /* transform: translateX(9vw);*/
 
 .do-seu-jeito-product-bottom{
     width: 35px;
@@ -460,10 +473,12 @@ nav ul li a i {
     background-color: white;
     border-radius: 50%;
     z-index: 1;
-    transform: translateX(20vw);
+    /* transform: translateX(20vw); */
     display: flex;
     align-items: center;
     justify-content: center;
+    position: absolute;
+    right: 50px;
 }
 
 .do-seu-jeito-sub-bottom{
@@ -536,4 +551,15 @@ nav ul li a i {
 
 .do-seu-jeito-page-number{
     color: white;
+}
+
+/*   correções    */
+
+.arrows-prod{
+    width: auto;
+    display: flex;
+    position: absolute;
+    right: 15%;
+    width: 150px;
+    justify-content: space-between;
 }

@@ -26,3 +26,5 @@ document.addEventListener('click', () => {
         department.classList.remove('open');
     });
 });
+
+
