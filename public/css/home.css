@@ -573,6 +573,7 @@ span{
 
 .anuncios img{
     border-radius: 1rem;
+    cursor: pointer;
 }
 
 .produtos2{
