@@ -12,8 +12,8 @@
 }
 
 .headNav {
-    width: 100%;/*f az o cabeçalho ocupar toda a largura da pag*/
-    height: 100px;/*define a altura do cabeçalho*/
+    width: 100vw; /* Use 100vw para ocupar toda a largura da tela */
+    height: 100px;
     display: flex;
     align-items: center;
     position: relative;
@@ -21,8 +21,9 @@
     z-index: 1;
     box-shadow: 0 0 10px #000;
     background-color: #fff; 
-    padding: 0 20px;
+    padding: 20px 20px;
 }
+
 
 .headNav .logo {
     margin-right: 20px;
@@ -35,7 +36,7 @@
 }
 
 .headNav .search-box {
-    flex: 1;
+    flex: 1; 
     position: relative;
 }
 
@@ -59,6 +60,7 @@
 
 .search-box button i {
     font-size: 17px;
+    margin-top: 1.2px;
     color: gray;
 }
 
@@ -89,12 +91,13 @@
     display: flex;
     justify-content: flex-end; 
     gap: 30px;
-    margin-right: 100px; 
+    margin: 0; /* Remover a margem direita */
+    padding: 0; /* Remover o padding */
 }
 
 .navb ul li {
     position: relative;
-    margin-top: 11px;
+    margin-top: 10px; /* Remover a margem superior */
     flex-direction: row;
     display: flex;
     justify-content: center;
@@ -161,11 +164,12 @@
 .department i {
     font-size: 16px;
     transition: transform 0.3s ease;
+    transform: rotate(0deg);
 }
 
 
 .department.open i {
-    transform: rotate(180deg);
+    transform: rotate(90deg);
 }
 
 .submenu {
@@ -187,7 +191,7 @@
 }
 
 .submenu.open {
-    display: block;   /* O submenu principal aparece quando a classe 'open' é adicionada */
+    display: block;   
 }
 
 .department.open .submenu {
@@ -258,7 +262,7 @@
 }
 
 .submenu-sub.open {
-    display: flex;   /* Exibe os submenus de tipos quando a classe 'open' é adicionada */
+    display: block;   /* Exibe os submenus de tipos quando a classe 'open' é adicionada */
 }
 /* Esconde o submenu do usuário inicialmente */
 .user-submenu {
