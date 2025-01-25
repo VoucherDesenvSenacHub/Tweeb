@@ -13,7 +13,7 @@
                 <li><a href="#">Home</a></li>
                 <li><a href="#">Sobre</a></li>
                 <li><a href="#">Orçamento</a></li>
-                <li><a href="#">Personalize</a></li>
+                <li><a href="#">Personalizar</a></li>
                 <li>
                     <a href="#"><i class='bx bx-cart-alt'></i></a>
                     <!-- <a href="#"><i class='bx bx-user'></i></a> -->

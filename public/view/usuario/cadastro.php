@@ -1,5 +1,6 @@
     <?php
     require '../../../Entity/Usuario.php'; // ALTERE O DIRETORIO CONFORME SALVO NO SEU LOCAL
+   
 
     if ($_SERVER['REQUEST_METHOD'] === 'POST') {
         $dados = [
