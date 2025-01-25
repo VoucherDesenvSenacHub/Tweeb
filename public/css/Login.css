@@ -192,3 +192,22 @@ body {
     justify-content: center;
     transform: translateX(40px);
 } 
+@media (max-width: 768px) {
+    .forms {
+        flex-direction: column; /* Mude para coluna em telas menores */
+        margin: 0; /* Remova margens laterais */
+        padding: 20px; /* Ajuste o padding */
+    }
+
+    .forms .input-box {
+        width: 100%; /* Mantenha 100% */
+    }
+
+    .forms .btn, .forms .bt {
+        width: 100%; /* Mantenha 100% */
+    }
+
+    .image-container {
+        display: none; /* Oculte a imagem em telas menores */
+    }
+}
