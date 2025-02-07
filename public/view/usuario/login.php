@@ -12,7 +12,7 @@ $usuario = Usuario::autenticar($email, $senha);
 
 if($usuario){
     echo '<script>alert("Login realizado. ");</script>';
-    header("Location: listar.php");
+    header("Location: listarUsuarios.php");
             exit;
 }else{
     echo '<script>alert("Usuário ou senha inválidos. Tente novamente");</script>';
