@@ -134,6 +134,7 @@ body {
     font-weight: 400;
 }
 .account .account-link{
+    color: rgb(1, 50, 99);
     text-decoration: none;
     font-size: 15px;
     margin-left: 5px;
@@ -164,6 +165,6 @@ body {
 }
 
 .image-container img {
-    max-width: 60%; 
+    max-width: 50%; 
     height: auto; 
 }
