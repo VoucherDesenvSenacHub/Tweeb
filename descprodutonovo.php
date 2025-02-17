@@ -22,10 +22,10 @@
             </div>
 
             <div class="tabs-memoria">
-                <button class="card-botao">4GB</button>
-                <button class="card-botao" id="ativo">6GB</button>
-                <button class="card-botao">8GB</button>
-                <button class="card-botao">12GB</button>
+                <button class="card-botao-produto">4GB</button>
+                <button class="card-botao-produto" id="ativo">6GB</button>
+                <button class="card-botao-produto">8GB</button>
+                <button class="card-botao-produto">12GB</button>
             </div>
 
             <div class="details">
@@ -152,9 +152,9 @@
             </table>
         </div>
 
-            <div class="more-info-btn-container">
+            <!-- <div class="more-info-btn-container">
                 <button class="more-info-btn">Saiba Mais <i class="fa-solid fa-chevron-down"></i></button>
-            </div>
+            </div> -->
         </div>
     </div>
 
@@ -225,108 +225,170 @@
                 <input type="text" name="add_comentario" placeholder="Deixe Comentário">
             </form>
 
-            <div class="reviews-comentarios">
-                <div class="card-comentario">
-                    <div class="card-details">
-                        <div class="card-profile-img">
-                            <img src="public/assets/img/cliente1.jpg" alt="">
-                        </div>
-                        <div class="card-user-info">
-                            <p class="card-data">22 junho 2024</p>
-                            <h1 class="card-user-name">Cleber Machado</h1>
-                            <div class="card-user-stars">
-                                <i class="fa-solid fa-star"></i>
-                                <i class="fa-solid fa-star"></i>
-                                <i class="fa-solid fa-star"></i>
-                                <i class="fa-solid fa-star"></i>
-                                <i class="fa-regular fa-star"></i>
+            <div class="reviews-comentarios" id="reviews-comentarios">
+                <?php
+                    for($x = 0; $x < 30; $x++){
+                        echo '<div class="card-comentario">
+                        <div class="card-details">
+                            <div class="card-profile-img">
+                                <img src="public/assets/img/cliente1.jpg" alt="">
                             </div>
-                        </div>
-
-                        
-                    </div>
-
-                    <div class="user-comentario">
-                        <p>Eu estava um pouco nervosa, mas eu não poderia estar mais feliz com a minha compra!  Um excelente produto e está tudo PERFEITO. Foi super fácil de instalar e parece ótimo.</p>
-                    </div>
-                </div>
-
-                <div class="card-comentario">
-                    <div class="card-details">
-                        <div class="card-profile-img">
-                            <img src="public/assets/img/cliente2.jpg" alt="">
-                        </div>
-                        <div class="card-user-info">
-                            <p class="card-data">11 setembro 2001</p>
-                            <h1 class="card-user-name">Berenice</h1>
-                            <div class="card-user-stars">
-                                <i class="fa-solid fa-star"></i>
-                                <i class="fa-solid fa-star"></i>
-                                <i class="fa-solid fa-star"></i>
-                                <i class="fa-solid fa-star"></i>
-                                <i class="fa-solid fa-star"></i>
+                            <div class="card-user-info">
+                                <p class="card-data">22 junho 2024</p>
+                                <h1 class="card-user-name">Cleber Machado</h1>
+                                <div class="card-user-stars">
+                                    <i class="fa-solid fa-star"></i>
+                                    <i class="fa-solid fa-star"></i>
+                                    <i class="fa-solid fa-star"></i>
+                                    <i class="fa-solid fa-star"></i>
+                                    <i class="fa-regular fa-star"></i>
+                                </div>
                             </div>
+
+                            
                         </div>
 
-                        
-                    </div>
-
-                    <div class="user-comentario">
-                        <p>Ótimo produto, veio bem embalado e funciona perfeitamente</p>
-                    </div>
-                </div>
-
-                <div class="card-comentario">
-                    <div class="card-details">
-                        <div class="card-profile-img">
-                            <img src="public/assets/img/cliente3.jfif" alt="">
+                        <div class="user-comentario">
+                            <p>Eu estava um pouco nervosa, mas eu não poderia estar mais feliz com a minha compra!  Um excelente produto e está tudo PERFEITO. Foi super fácil de instalar e parece ótimo.</p>
                         </div>
-                        <div class="card-user-info">
-                            <p class="card-data">12 abril 2024</p>
-                            <h1 class="card-user-name">Joaquina Ferreira</h1>
-                            <div class="card-user-stars">
-                                <i class="fa-solid fa-star"></i>
-                                <i class="fa-solid fa-star"></i>
-                                <i class="fa-solid fa-star"></i>
-                                <i class="fa-solid fa-star"></i>
-                                <i class="fa-regular fa-star"></i>
-                            </div>
-                        </div>
+                    </div>';
+                    }
+                ?>
 
-                        
-                    </div>
-
-                    <div class="user-comentario">
-                        <p>Esse produto acabou com a minha vida, destruiu minha familia</p>
-                    </div>
-                </div>
-
-                <div class="card-comentario">
-                    <div class="card-details">
-                        <div class="card-profile-img">
-                            <img src="public/assets/img/cliente1.jpg" alt="">
-                        </div>
-                        <div class="card-user-info">
-                            <p class="card-data">22 junho 2024</p>
-                            <h1 class="card-user-name">Cleber Machado</h1>
-                            <div class="card-user-stars">
-                                <i class="fa-solid fa-star"></i>
-                                <i class="fa-solid fa-star"></i>
-                                <i class="fa-solid fa-star"></i>
-                                <i class="fa-solid fa-star"></i>
-                                <i class="fa-regular fa-star"></i>
-                            </div>
-                        </div>
-
-                        
-                    </div>
-
-                    <div class="user-comentario">
-                        <p>Eu estava um pouco nervosa, mas eu não poderia estar mais feliz com a minha compra!  Um excelente produto e está tudo PERFEITO. Foi super fácil de instalar e parece ótimo.</p>
-                    </div>
-                </div>
+            </div>
+            <div class="more-info-btn-container">
+                <button class="more-info-btn" onclick="VerMaisComentarios()">Ver Mais <i class="fa-solid fa-chevron-down"></i></button>
             </div>
         </section>
     </div>
+
+    <!--  -->
+
+<!--     
+    <section class="produtos">
+        <div class="produtos-grid">
+            <div class="produtos-card">
+                <img class="heart" src="public/assets/img/heart_disabled.png" alt="coração" onclick="AtivarCoracao(this)">
+
+                <img class="image-produto" src="public/assets/img/card-produto2.png" alt="">
+                <p>Monitor Gamer Curvo</p>
+                <p>GAMING MG700 27</p>
+                <h1>R$2535,99</h1>
+                <button class="card-botao">Comprar Agora</button>
+            </div>
+            <div class="produtos-card">
+                <img class="heart" src="public/assets/img/heart_disabled.png" alt="coração" onclick="AtivarCoracao(this)">
+
+                <img class="image-produto" src="public/assets/img/card-produto2.png" alt="">
+                <p>Monitor Gamer Curvo</p>
+                <p>GAMING MG700 27</p>
+                <h1>R$2535,99</h1>
+                <button class="card-botao">Comprar Agora</button>
+            </div>
+            <div class="produtos-card">
+                <img class="heart" src="public/assets/img/heart_disabled.png" alt="coração" onclick="AtivarCoracao(this)">
+
+                <img class="image-produto" src="public/assets/img/card-produto2.png" alt="">
+                <p>Monitor Gamer Curvo</p>
+                <p>GAMING MG700 27</p>
+                <h1>R$2535,99</h1>
+                <button class="card-botao">Comprar Agora</button>
+            </div>
+            <div class="produtos-card">
+                <img class="heart" src="public/assets/img/heart_disabled.png" alt="coração" onclick="AtivarCoracao(this)">
+
+                <img class="image-produto" src="public/assets/img/card-produto2.png" alt="">
+                <p>Monitor Gamer Curvo</p>
+                <p>GAMING MG700 27</p>
+                <h1>R$2535,99</h1>
+                <button class="card-botao">Comprar Agora</button>
+            </div>
+        </div>
+    </section> -->
+
+    <section class="produtos produtos2">
+        <div class="promo-text">
+            <p>Produtos relacionados</p>
+        </div>
+        <div class="produtos-grid">
+            <div class="produtos-card">
+                <img class="heart" src="public/assets/img/heart_disabled.png" alt="coração" onclick="AtivarCoracao(this)">
+
+                <img class="add-carrinho" src="public/assets/img/carrinho-card.png" alt="">
+
+                <img class="image-produto" src="public/assets/img/card-produto2.png" alt="">
+                <div class="card-rate">
+                    <i class="fa-solid fa-star"></i>
+                    <i class="fa-solid fa-star"></i>
+                    <i class="fa-solid fa-star"></i>
+                    <i class="fa-solid fa-star"></i>
+                    <i class="fa-solid fa-star"></i>
+                    <span class="qnt-avaliacoes">(500+)</span>
+                </div>
+                <p>Monitor Gamer Curvo</p>
+                <p>GAMING MG700 27</p>
+                <h1>R$2535,99</h1>
+                <button class="card-botao">Comprar Agora</button>
+            </div>
+            <div class="produtos-card">
+                <img class="heart" src="public/assets/img/heart_disabled.png" alt="coração" onclick="AtivarCoracao(this)">
+
+                <img class="add-carrinho" src="public/assets/img/carrinho-card.png" alt="">
+
+                <img class="image-produto" src="public/assets/img/card-produto2.png" alt="">
+                <div class="card-rate">
+                    <i class="fa-solid fa-star"></i>
+                    <i class="fa-solid fa-star"></i>
+                    <i class="fa-solid fa-star"></i>
+                    <i class="fa-solid fa-star"></i>
+                    <i class="fa-solid fa-star"></i>
+                    <span class="qnt-avaliacoes">(500+)</span>
+                </div>
+                <p>Monitor Gamer Curvo</p>
+                <p>GAMING MG700 27</p>
+                <h1>R$2535,99</h1>
+                <button class="card-botao">Comprar Agora</button>
+            </div>
+            <div class="produtos-card">
+                <img class="heart" src="public/assets/img/heart_disabled.png" alt="coração" onclick="AtivarCoracao(this)">
+
+                <img class="add-carrinho" src="public/assets/img/carrinho-card.png" alt="">
+
+                <img class="image-produto" src="public/assets/img/card-produto2.png" alt="">
+                <div class="card-rate">
+                    <i class="fa-solid fa-star"></i>
+                    <i class="fa-solid fa-star"></i>
+                    <i class="fa-solid fa-star"></i>
+                    <i class="fa-solid fa-star"></i>
+                    <i class="fa-solid fa-star"></i>
+                    <span class="qnt-avaliacoes">(500+)</span>
+                </div>
+                <p>Monitor Gamer Curvo</p>
+                <p>GAMING MG700 27</p>
+                <h1>R$2535,99</h1>
+                <button class="card-botao">Comprar Agora</button>
+            </div>
+            <div class="produtos-card">
+                <img class="heart" src="public/assets/img/heart_disabled.png" alt="coração" onclick="AtivarCoracao(this)">
+
+                <img class="add-carrinho" src="public/assets/img/carrinho-card.png" alt="">
+
+                <img class="image-produto" src="public/assets/img/card-produto2.png" alt="">
+                <div class="card-rate">
+                    <i class="fa-solid fa-star"></i>
+                    <i class="fa-solid fa-star"></i>
+                    <i class="fa-solid fa-star"></i>
+                    <i class="fa-solid fa-star"></i>
+                    <i class="fa-solid fa-star"></i>
+                    <span class="qnt-avaliacoes">(500+)</span>
+                </div>
+                <p>Monitor Gamer Curvo</p>
+                <p>GAMING MG700 27</p>
+                <h1>R$2535,99</h1>
+                <button class="card-botao">Comprar Agora</button>
+            </div>
+        </div>
+      </section>
+<script defer src="public/js/descProduto.js"></script>
 </body>
 </html>
