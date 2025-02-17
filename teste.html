@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Exemplo de Cards de Produtos</title>
+    <style>
+        .card {
+            border: 1px solid #ccc;
+            padding: 20px;
+            margin: 10px;
+            width: 200px;
+            text-align: center;
+        }
+        .product-name {
+            font-size: 18px;
+            font-weight: bold;
+        }
+        .product-price {
+            font-size: 16px;
+            color: green;
+        }
+        .quantity {
+            font-size: 20px;
+            margin: 10px 0;
+        }
+        .arrows {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+        .arrows img {
+            width: 20px;
+            cursor: pointer;
+        }
+    </style>
+</head>
+<body>
+
+<div class="card">
+    <p class="product-name">Produto 1</p>
+    <p class="product-price">R$ 100,00</p>
+    <div class="arrows">
+        <img src="https://img.icons8.com/ios/50/000000/chevron-left.png" alt="decrease" class="decrease">
+        <div class="quantity">0</div>
+        <img src="https://img.icons8.com/ios/50/000000/chevron-right.png" alt="increase" class="increase">
+    </div>
+</div>
+
+<div class="card">
+    <p class="product-name">Produto 2</p>
+    <p class="product-price">R$ 200,00</p>
+    <div class="arrows">
+        <img src="https://img.icons8.com/ios/50/000000/chevron-left.png" alt="decrease" class="decrease">
+        <div class="quantity">0</div>
+        <img src="https://img.icons8.com/ios/50/000000/chevron-right.png" alt="increase" class="increase">
+    </div>
+</div>
+
+<div class="card">
+    <p class="product-name">Produto 3</p>
+    <p class="product-price">R$ 300,00</p>
+    <div class="arrows">
+        <img src="https://img.icons8.com/ios/50/000000/chevron-left.png" alt="decrease" class="decrease">
+        <div class="quantity">0</div>
+        <img src="https://img.icons8.com/ios/50/000000/chevron-right.png" alt="increase" class="increase">
+    </div>
+</div>
+
+<script>
+    // Função para atualizar a quantidade
+    function updateQuantity(action, element) {
+        const quantityElement = element.closest('.card').querySelector('.quantity');
+        let currentQuantity = parseInt(quantityElement.textContent);
+        
+        if (action === 'increase') {
+            currentQuantity += 1;
+        } else if (action === 'decrease' && currentQuantity > 0) {
+            currentQuantity -= 1;
+        }
+        
+        quantityElement.textContent = currentQuantity;
+    }
+
+    // Adicionando eventos de clique para as setas
+    document.querySelectorAll('.increase').forEach(arrow => {
+        arrow.addEventListener('click', (e) => {
+            updateQuantity('increase', e.target);
+        });
+    });
+
+    document.querySelectorAll('.decrease').forEach(arrow => {
+        arrow.addEventListener('click', (e) => {
+            updateQuantity('decrease', e.target);
+        });
+    });
+</script>
+
+</body>
+</html>
