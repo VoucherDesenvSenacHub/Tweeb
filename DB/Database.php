@@ -82,7 +82,9 @@ class Database{
         $order = strlen($order) ? 'ORDER BY ' . $order : '';
         $limit = strlen($limit) ? 'LIMIT ' . $limit : '';
 
-        $query = 'SELECT '.$fields. ' FROM ' .$this->table. ' '.$where;
+        $query = 'SELECT ' . $fields . ' FROM ' . $this->table . ' ' . $where . ' ' . $order . ' ' . $limit;
+
+        $stmt = $this->execute($query);
         //SELECT * FROM pessoa;
         return $this->execute($query);
 
