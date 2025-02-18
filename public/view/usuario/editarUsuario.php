@@ -2,95 +2,61 @@
 require '../../../Entity/Usuario.php';  // ALTERE O DIRETÓRIO CONFORME SALVO NO SEU LOCAL
 
 
-if (!isset($_GET['id_usuario']) || empty($_GET['id_usuario'])) {
-    echo '<script>alert("ID inválido!");</script>';
-    echo "<meta http-equiv='refresh' content='0.5;url=listarUsuarios.php' />";
-    exit;
-}
+if (isset($_GET['id_usuario']) && !empty($_GET['id_usuario'])) {
+    $id_usuario = $_GET['id_usuario'];
 
+    $usuario = Usuario::buscarPorId($id_usuario);
+    
 
-$id_usuario = $_GET['id_usuario'];
-$usuario = Usuario::buscarPorId($id_usuario);
-
-
-if (!$usuario) {
-    echo '<script>alert("Usuário não encontrado!");</script>';
+    if (!$usuario) {
+        echo '<script>alert("Usuário não encontrado!");</script>';
+        echo "<meta http-equiv='refresh' content='0.5;url=listarUsuarios.php' />";
+        exit;
+    }
+} else {
+    echo '<script>alert("ID do usuário não fornecido!");</script>';
     echo "<meta http-equiv='refresh' content='0.5;url=listarUsuarios.php' />";
     exit;
 }
 
 
 if ($_SERVER['REQUEST_METHOD'] === 'POST') {
-    
     $dados = [
         'nome' => $_POST['nome'],
         'email' => $_POST['email'],
+        'senha' => password_hash($_POST['senha'], PASSWORD_BCRYPT),
     ];
 
-    
-    if (!empty($_POST['senha'])) {
-        if ($_POST['senha'] !== $_POST['confirmacao']) {
-            echo '<script>alert("As senhas não coincidem!");</script>';
-            exit;
-        }
-        $dados['senha'] = password_hash($_POST['senha'], PASSWORD_BCRYPT);
-    }
 
-    
     if (Usuario::atualizar($id_usuario, $dados)) {
         echo '<script>alert("Usuário atualizado com sucesso!");</script>';
         echo "<meta http-equiv='refresh' content='0.5;url=listarUsuarios.php' />";
     } else {
-        echo '<script>alert("Erro ao atualizar o usuário.");</script>';
+        echo '<script>alert("Erro ao atualizar o usuário. Tente novamente!");</script>';
     }
-    exit;
 }
 ?>
-
 <!DOCTYPE html>
 <html lang="pt-br">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Editar Usuário</title>
-    <link rel="stylesheet" href="../../../public/css/listarU.css">
+    <link rel="stylesheet" href="../../css/cadastro.css">
 </head>
 <body>
-
-    <section id="main-content">
-        <header>
-            <div class="listarU-logo">
-                <img src="../../../public/assets/img/Ativo 2.png " alt="logo tweeb">
-            </div>
-        </header>
-
-        <section class="listarU-departments-bar">
-            <div class="listarU-department"></div>
-        </section>
-
-        <section>
-            <div class="listarU-titulo"><h3>Editar Usuário</h3></div>
-
-            <form action="editarUsuario.php" method="POST">
-                <input type="hidden" name="id_usuario" value="<?= $usuario['id_usuario'] ?>">
-
-                <label for="nome">Nome</label>
-                <input type="text" id="nome" name="nome" value="<?= $usuario['nome'] ?>" required>
-
-                <label for="email">Email</label>
-                <input type="email" id="email" name="email" value="<?= $usuario['email'] ?>" required>
-
-                <label for="senha">Senha (Deixe em branco se não deseja alterar)</label>
-                <input type="password" id="senha" name="senha">
-
-                <label for="confirmacao">Confirmação de Senha</label>
-                <input type="password" id="confirmacao" name="confirmacao">
-
-                <button type="submit">Atualizar Usuário</button>
+    <div class="container">
+        <div class="card">
+        <img src="../../assets/img/logo_img.png" alt="Logo" cl ass="logo"> <br></br>
+            <h2>Editar Usuário</h2>
+            <p>Edite todos os dados obrigatórios e clique em 'Atualizar' para confirmar as alterações.</p><br> 
+            <form method="POST" action="editarUsuario.php?id_usuario=<?php echo $id_usuario; ?>">
+                <input name="nome" type="text" placeholder="Nome" class="input" value="<?php echo $usuario['nome']; ?>" required><br></br>
+                <input name="email" type="email" placeholder="Email" class="input" value="<?php echo $usuario['email']; ?>" required><br></br>
+                <input name="senha" type="password" placeholder="Nova senha" class="input" required><br></br>
+                <button type="submit" class="btn-email">Atualizar</button>
             </form>
-
-        </section>
-    </section>
-
+        </div>
+    </div>
 </body>
 </html>

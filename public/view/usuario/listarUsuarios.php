@@ -29,7 +29,7 @@ $usuarios = Usuario::listar()->fetchAll(PDO::FETCH_ASSOC);
         </section>
 
         <section>
-            <div class="listarU-titulo"><h3>CLIENTES CADASTRADOS</h3></div>
+            <div class="listarU-titulo"><h3>USUÁRIOS CADASTRADOS</h3></div>
 
             <div class="listarU-search-box">
                 <form action="" onsubmit="event.preventDefault(); filterTable();">
@@ -53,35 +53,34 @@ $usuarios = Usuario::listar()->fetchAll(PDO::FETCH_ASSOC);
                         </tr>
                     </thead>
                     <tbody>
-    <?php
-    foreach ($usuarios as $usuario) {
-        echo '
-        <tr>
-            <td>' . $usuario['id_usuario'] . '</td>
-            <td>' . $usuario['nome'] . '</td>
-            <td>' . $usuario['email'] . '</td>
-            <td>
-                <div class="td_botao">
-                    <form action="editarUsuario.php" method="get">
-                        <input type="hidden" name="id_usuario" value="' . $usuario['id_usuario'] . '">
-                        <button type="submit" class="listarU-edit-btn">
-                            <img src="../../../public/assets/img/edit-3.png" alt="Editar" class="listarU-edit-icon">
-                        </button>
-                    </form>
-
-                    <form action="excluirUsuario.php" method="post">
-                        <input type="hidden" name="id_usuario" value="' . $usuario['id_usuario'] . '">
-                        <button type="submit" class="listarU-delete-btn">
-                            <img src="../../../public/assets/img/trash-2.png" alt="Excluir" class="listarU-delete-icon">
-                        </button>
-                    </form>
-                </div>
-            </td>
-        </tr>';
-    }
-    ?>
-</tbody>
-
+                        <?php
+                        foreach ($usuarios as $usuario) {
+                            echo '
+                            <tr>
+                                <td>' . $usuario['id_usuario'] . '</td>
+                                <td>' . $usuario['nome'] . '</td>
+                                <td>' . $usuario['email'] . '</td>
+                                <td>
+                                    <div class="td_botao">
+                                        <form action="editarUsuario.php" method="get">
+                                            <input type="hidden" name="id_usuario" value="' . $usuario['id_usuario'] . '">
+                                            <button type="submit" class="listarU-edit-btn">
+                                                <img src="../../../public/assets/img/edit-3.png" alt="Editar" class="listarU-edit-icon">
+                                            </button>
+                                        </form>
+                    
+                                        <form action="excluirUsuario.php" method="post">
+                                            <input type="hidden" name="id_usuario" value="' . $usuario['id_usuario'] . '">
+                                            <button type="submit" class="listarU-delete-btn">
+                                                <img src="../../../public/assets/img/trash-2.png" alt="Excluir" class="listarU-delete-icon">
+                                            </button>
+                                        </form>
+                                    </div>
+                                </td>
+                            </tr>';
+                        }
+                        ?>
+                    </tbody>
                 </table>
             </div>
         </section>
