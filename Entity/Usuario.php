@@ -36,7 +36,9 @@ class Usuario {
     public static function buscarPorId($id) {
         $db = new Database('usuario');
         $result = $db->select("id_usuario = {$id}");
-        return $result ? $result[0] : null;
+        // return $result ? $result[0] : null;
+        return $result->fetch(PDO::FETCH_ASSOC);
+        // Usando fetch() para obter o resultado como array associativo
     }
 
     public static function excluir($id) {
