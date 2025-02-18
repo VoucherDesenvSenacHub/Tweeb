@@ -1,6 +1,4 @@
 // Seleciona todas as divisões de departamento
-console.log("aaaaaaaaa");
-
 const departments = document.querySelectorAll('.department');
 
 const listItems = document.querySelectorAll('.do-seu-jeito-ul-components li');
@@ -72,40 +70,66 @@ function updateAmount(action, element) {
 // Adiciona eventos de clique para as setas
 document.querySelectorAll('.do-seu-jeito-left-arrow').forEach(arrow => {
     arrow.addEventListener('click', (e) => {
-        console.log("clicou");
+        // console.log("clicou");
         updateAmount('decrease', e.target);
     });
 });
 
 document.querySelectorAll('.do-seu-jeito-right-arrow').forEach(arrow => {
     arrow.addEventListener('click', (e) => {
-        console.log("clicou");
+        // console.log("clicou");
         updateAmount('increase', e.target);
     });
 });
 
 
-document.querySelectorAll('.do-seu-jeito-sub-bottom').forEach(botao => {
-    botao.addEventListener('click', (e) => {
-        ativarDiv();
+// document.querySelectorAll('.do-seu-jeito-sub-bottom').forEach(botao => {
+//     botao.addEventListener('click', (e) => {
+//         ativarDiv();
+//     });
+// });
+// // do-seu-jeito-sub-button
+
+// document.querySelectorAll('.do-seu-jeito-sub-button').forEach(botao => {
+//     botao.addEventListener('click', (e) => {
+//         desativarDiv();
+//     });
+// });
+
+// const verMais = document.getElementById('produto-ver-mais');
+
+// function ativarDiv() {
+//     verMais.classList.add('div-ativo');
+//     verMais.classList.remove('div-desativado');
+// }
+
+// function desativarDiv() {
+//     verMais.classList.add('div-desativado');
+//     verMais.classList.remove('div-ativo');
+// }
+
+document.querySelectorAll('.do-seu-jeito-sub-bottom').forEach((botao, index) => {
+    botao.addEventListener('click', () => {
+        ativarDiv(index);
     });
 });
-// do-seu-jeito-sub-button
 
-document.querySelectorAll('.do-seu-jeito-sub-button').forEach(botao => {
-    botao.addEventListener('click', (e) => {
-        desativarDiv();
+document.querySelectorAll('.do-seu-jeito-sub-button').forEach((botao, index) => {
+    botao.addEventListener('click', () => {
+        desativarDiv(index);
     });
 });
 
-const verMais = document.getElementById('produto-ver-mais');
-
-function ativarDiv() {
+function ativarDiv(index) {
+    // Seleciona o menu de detalhes do produto específico usando o índice
+    const verMais = document.querySelectorAll('.produto-ver-mais')[index];
     verMais.classList.add('div-ativo');
     verMais.classList.remove('div-desativado');
 }
 
-function desativarDiv() {
+function desativarDiv(index) {
+    // Seleciona o menu de detalhes do produto específico usando o índice
+    const verMais = document.querySelectorAll('.produto-ver-mais')[index];
     verMais.classList.add('div-desativado');
     verMais.classList.remove('div-ativo');
 }

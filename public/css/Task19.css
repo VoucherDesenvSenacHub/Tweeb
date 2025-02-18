@@ -587,7 +587,7 @@ nav ul li a i {
 }
 
 .produto-ver-mais{
-    position: absolute;
+    position: relative;
     display: flex;
     align-items: center;
     width: 80%;
@@ -681,4 +681,14 @@ BF99FE */
 
 .div-desativado{
     display: none;
+}
+
+.produto-container{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    gap: 2rem;
+    height: auto;
+    width: 100%;
 }
